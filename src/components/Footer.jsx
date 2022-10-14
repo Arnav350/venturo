@@ -2,6 +2,14 @@ import React from "react";
 import "../App.css";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 
 function Footer() {
   return (
@@ -58,27 +66,27 @@ function Footer() {
             <ul className="footer-contact">
               <li className="footer-icon">
                 <Link to="/" className="footer-a">
-                  <i className="far fa-envelope"></i>
+                  <FaEnvelope />
                 </Link>
               </li>
               <li className="footer-icon">
                 <Link to="/" className="footer-a">
-                  <i className="fa-brands fa-facebook-f"></i>
+                  <FaFacebookF />
                 </Link>
               </li>
               <li className="footer-icon">
                 <Link to="/" className="footer-a">
-                  <i className="fa-brands fa-instagram"></i>
+                  <FaInstagram />
                 </Link>
               </li>
               <li className="footer-icon">
                 <Link to="/" className="footer-a">
-                  <i className="fa-brands fa-linkedin-in"></i>
+                  <FaLinkedinIn />
                 </Link>
               </li>
               <li className="footer-icon">
                 <Link to="/" className="footer-a">
-                  <i className="fa-brands fa-twitter"></i>
+                  <FaTwitter />
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 import "./About.css";
 import Mission from "../assets/mission.jpg";
@@ -73,12 +74,12 @@ function About() {
             </div>
           </div>
           <div className="bottom-links">
-            <a href="" className="bottom-learn blue-button">
+            <Link to="/" className="bottom-learn blue-button">
               Start Learning
-            </a>
-            <a href="" className="bottom-vol white-button">
+            </Link>
+            <Link to="/" className="bottom-vol white-button">
               Volunteer
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -72,12 +72,12 @@ function Main() {
                   !
                 </p>
               </div>
-              <a href="" className="steps-start blue-button">
+              <Link to="/" className="steps-start blue-button">
                 Get Started
-              </a>
-              <a href="/venturo/faq.html" className="steps-more">
+              </Link>
+              <Link to="/Faq" className="steps-more">
                 Learn more about Venturo's tutoring
-              </a>
+              </Link>
             </div>
           </div>
         </div>

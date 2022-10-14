@@ -1,57 +1,45 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../App.css";
 import "./Review.css";
+import Review_Box from "../components/Review_Box.jsx";
 import Profile1 from "../assets/profile1.png";
-import Stars from "../assets/stars.png";
 
 function Review() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    main();
+  }, []);
+
+  async function main() {
+    const { data } = await axios.get(
+      "https://jsonplaceholder.typicode.com/comments"
+    );
+    setUsers(data);
+  }
+
   return (
     <>
       <section>
         <div className="review container">
           <h1 className="review-title">Reviews</h1>
           <div className="review-container">
-            <div className="review-box">
-              <figure className="review-fig">
-                <img src={Profile1} alt="Profile1" className="review-profile" />
-              </figure>
-              <div className="review-body">
-                <h3 className="review-name">Arnav Patel</h3>
-                <p className="review-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                  in, quam quae tenetur voluptatum omnis ipsam nemo praesentium,
-                  minus odit incidunt, hic quisquam harum! Corrupti cum
-                  voluptatum doloremque placeat assumenda!
-                </p>
-                <div className="review-bottom">
-                  <figure className="review-star">
-                    <img src={Stars} alt="Stars" className="review-rating" />
-                  </figure>
-                  <h4 className="review-date">April 27, 2034</h4>
-                </div>
-              </div>
-            </div>
-            <div className="review-box">
-              <figure className="review-fig">
-                <img src={Profile1} alt="Profile1" className="review-profile" />
-              </figure>
-              <div className="review-body">
-                <h3 className="review-name">Arnav Patel</h3>
-                <p className="review-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                  in, quam quae tenetur voluptatum omnis ipsam nemo praesentium,
-                  minus odit incidunt, hic quisquam harum! Corrupti cum
-                  voluptatum doloremque placeat assumenda!
-                </p>
-                <div className="review-bottom">
-                  <figure className="review-star">
-                    <img src={Stars} alt="Stars" className="review-rating" />
-                  </figure>
-                  <h4 className="review-date">April 27, 2034</h4>
-                </div>
-              </div>
-            </div>
+            {users.map((user) => (
+              <Review_Box
+                key={user.id}
+                profile={Profile1}
+                name={user.name}
+                text={user.body}
+                date={
+                  user.postId +
+                  "/" +
+                  user.id +
+                  "/" +
+                  Math.floor(Math.random() * 2000 + 1000)
+                }
+              />
+            ))}
           </div>
         </div>
       </section>
