@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Work+Sans:wght@300;500&display=swap');
+
+* {
+  font-family: "Work Sans", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: #1d1e24;
+  line-height: 1.25;
+}
+
+p {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 40px 12px;
+}
+
+section:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blue-button:hover {
+  background-color: #34ebcd;
+  border: #34ebcd solid;
+}
+
+.white-button:hover {
+  color: #34ebcd;
+  border: #e0e2e6 solid;
+}
+
+.gray-button:hover {
+  background-color: #3a3a3f;
+  border: #3a3a3f solid 2px;
+  color: #f8f8f8;
+}

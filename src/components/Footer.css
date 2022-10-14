@@ -1,0 +1,53 @@
+/* footer */
+
+footer {
+  background-color: #3a3a3f;
+}
+
+.footer-bar,
+.footer-contact {
+  display: flex;
+}
+
+.footer-list {
+  padding: 0px 50px;
+}
+
+.footer-connect {
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-title {
+  color: #ffffff;
+  padding-bottom: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.footer-li {
+  padding-bottom: 8px;
+}
+
+.footer-a {
+  color: #ffffff;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.footer-a:hover {
+  text-decoration: underline;
+}
+
+.footer-icon {
+  padding: 0px 10px;
+  transform: scale(1.3);
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  padding-left: 50px;
+  padding-top: 20px;
+}

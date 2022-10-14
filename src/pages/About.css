@@ -1,0 +1,131 @@
+/* ABOUT */
+
+/* mission */
+
+.about {
+  padding: 80px 20px;
+}
+
+.about-title {
+  font-size: 44px;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.mission {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  padding: 32px 16px;
+}
+
+.mission-text {
+  width: 40%;
+  padding-right: 12px;
+}
+
+.mission-title {
+  font-size: 38px;
+  padding-bottom: 16px;
+}
+
+.mission-p {
+  font-size: 18px;
+}
+
+.mission-fig {
+  width: 60%;
+}
+
+.mission-img {
+  width: 100%;
+}
+
+/* why us */
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 100%;
+  padding: 96px 16px;
+}
+
+.why {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.why-fig {
+  width: 55%;
+}
+
+.why-img {
+  width: 100%;
+}
+
+.why-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding-left: 32px;
+}
+
+.why-title {
+  font-size: 38px;
+  padding-bottom: 16px;
+}
+
+.reason {
+  display: flex;
+  padding: 16px 8px;
+}
+
+.reason-fig {
+  width: 100px;
+}
+
+.reason-img {
+  width: 100%;
+}
+
+.reason-text {
+  padding: 0px 12px;
+}
+
+.reason-title {
+  font-weight: 400;
+}
+
+.bottom-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+}
+
+.bottom-learn {
+  color: #ffffff;
+  background-color: #38d9c2;
+  border: #38d9c2 solid;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-right: 24px;
+  transition: all 300ms ease;
+}
+
+.bottom-vol {
+  color: #38d9c2;
+  background-color: #ffffff;
+  border: #d7d8de solid;
+  padding: 12px 42px;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: all 300ms ease;
+}
