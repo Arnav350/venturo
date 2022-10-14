@@ -1,0 +1,84 @@
+/* DONATE */
+
+.donate {
+  position: relative;
+  height: 600px;
+}
+
+.donate-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+  height: 550px;
+  background-color: #ffffff;
+  right: 30px;
+  top: 40px;
+  border-radius: 32px;
+}
+
+.donate-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.donate-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 16px 0px;
+}
+
+.donate-amount,
+.donate-time {
+  width: calc(80% / 3);
+  display: flex;
+  justify-content: center;
+  padding: 8px 0px;
+  margin: 4px;
+  color: #38d9c2;
+  background-color: #ffffff;
+  border: #d7d8de solid 2px;
+  border-radius: 8px;
+  transition: all 300ms ease;
+}
+
+.donate-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.donate-p {
+  padding: 8px 5%;
+}
+
+.donate-number {
+  width: 50%;
+  margin-left: 4px;
+  border: #d7d8de solid 2px;
+  border-radius: 4px;
+}
+
+.donate-text {
+  width: 90%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 4px;
+  border: #d7d8de solid 2px;
+  border-radius: 4px;
+  resize: none;
+}
+
+.donate-submit {
+  color: #ffffff;
+  background-color: #38d9c2;
+  border: #38d9c2 solid;
+  padding: 8px 32px;
+  border-radius: 8px;
+  margin: 16px auto;
+  transition: all 300ms ease;
+}

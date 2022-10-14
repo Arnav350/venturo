@@ -3,6 +3,7 @@ import "../App.css";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
+import Name from "../assets/venturo.png";
 
 function Nav() {
   return (
@@ -12,7 +13,7 @@ function Nav() {
           <img src={Logo} alt="Logo" className="nav-logo" />
         </figure>
         <figure className="nav-fig">
-          <img src="./assets/venturo.png" alt="" className="nav-name" />
+          <img src={Name} alt="Name" className="nav-name" />
         </figure>
       </Link>
       <ul className="nav-ul">
