@@ -2,7 +2,6 @@ import React from "react";
 import "../App.css";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   FaEnvelope,
   FaFacebookF,

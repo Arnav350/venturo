@@ -9,10 +9,10 @@ function Review() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    main();
+    getUsers();
   }, []);
 
-  async function main() {
+  async function getUsers() {
     const { data } = await axios.get(
       "https://jsonplaceholder.typicode.com/comments"
     );
