@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./About.css";
+import About_Reason from "../components/About_Reason.jsx";
 import Mission from "../assets/mission.jpg";
-import Bullet1 from "../assets/bullet1.png";
 
 function About() {
   return (
@@ -35,42 +35,20 @@ function About() {
             </figure>
             <div className="why-box">
               <h1 className="why-title">Why Choose Us?</h1>
-              <div className="reason">
-                <figure className="reason-fig">
-                  <img src={Bullet1} alt="Bullet1" className="reason-img" />
-                </figure>
-                <div className="reason-text">
-                  <h3 className="reason-title">Reason 1</h3>
-                  <p className="reason-para">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quidem numquam asperiores vitae animi iure voluptas
-                  </p>
-                </div>
-              </div>
-              <div className="reason">
-                <figure className="reason-fig">
-                  <img src={Bullet1} alt="Bullet1" className="reason-img" />
-                </figure>
-                <div className="reason-text">
-                  <h3 className="reason-title">Reason 2</h3>
-                  <p className="reason-para">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quidem numquam asperiores vitae animi iure voluptas
-                  </p>
-                </div>
-              </div>
-              <div className="reason">
-                <figure className="reason-fig">
-                  <img src={Bullet1} alt="Bullet1" className="reason-img" />
-                </figure>
-                <div className="reason-text">
-                  <h3 className="reason-title">Reason 3</h3>
-                  <p className="reason-para">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quidem numquam asperiores vitae animi iure voluptas
-                  </p>
-                </div>
-              </div>
+              <About_Reason
+                title="Reason 1"
+                para="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem numquam asperiores vitae animi iure voluptas"
+              />
+              <About_Reason
+                title="Reason 2"
+                para="Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quidem numquam asperiores vitae animi iure voluptas"
+              />
+              <About_Reason
+                title="Reason 3"
+                para="Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quidem numquam asperiores vitae animi iure voluptas"
+              />
             </div>
           </div>
           <div className="bottom-links">
