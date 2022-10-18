@@ -7,11 +7,11 @@ function PlanCard({
   price,
   ses = "/Session",
   length = "1 Hour Sessions",
-  num = "Individual",
+  num = "One on One Relationships",
   third = true,
 }) {
   return (
-    <div className="plan-card">
+    <button className="plan-card">
       <h3 className="plan-time plan-text">{time}</h3>
       <h4 className="plan-sub plan-text">Monthly Billing Period</h4>
       <h1 className="plan-price plan-text">{price}</h1>
@@ -35,7 +35,7 @@ function PlanCard({
           </li>
         ) : null}
       </ul>
-    </div>
+    </button>
   );
 }
 

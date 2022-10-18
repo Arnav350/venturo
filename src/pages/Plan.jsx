@@ -12,7 +12,7 @@ function Plan() {
           <div className="plan-box">
             <PlanCard time="Weekly" price="$22" />
             <PlanCard price="$20" />
-            <PlanCard price="$15" num="Group Lesson" third={false} />
+            <PlanCard price="$15" num="Group Lessons" third={false} />
             <PlanCard time="Weekly" price="$25" length="Half Hour Sessions" />
             <PlanCard
               time="Custom"
