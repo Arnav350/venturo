@@ -4,15 +4,17 @@ import "../App.css";
 import "./Review.css";
 import ReviewBox from "../components/ReviewBox.jsx";
 import Profile1 from "../assets/profile1.png";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function Review() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const num = 3;
 
   useEffect(() => {
     window.scrollTo(0, 0);
     getUsers();
-    setLoading(false);
   }, []);
 
   async function getUsers() {
@@ -20,6 +22,7 @@ function Review() {
       "https://jsonplaceholder.typicode.com/comments"
     );
     setUsers(data);
+    setLoading(false);
   }
 
   return (
@@ -28,21 +31,35 @@ function Review() {
         <div className="review container">
           <h1 className="review-title">Reviews</h1>
           <div className="review-container">
-            {users.map((user) => (
-              <ReviewBox
-                key={user.id}
-                profile={Profile1}
-                name={user.name}
-                text={user.body}
-                date={
-                  user.postId +
-                  "/" +
-                  user.id +
-                  "/" +
-                  Math.floor(Math.random() * 2000 + 1000)
-                }
-              />
-            ))}
+            {loading
+              ? [...Array(num)].map((elem, index) => (
+                  <ReviewBox
+                    key={index}
+                    profile={
+                      <Skeleton height={200} width={200} circle={true} />
+                    }
+                    name={<Skeleton height={48} width={696} />}
+                    text={<Skeleton height={58} width={696} />}
+                    stars={<Skeleton height={25} width={128} />}
+                    date={<Skeleton height={25} width={100} />}
+                    skeleton={true}
+                  />
+                ))
+              : users.map((user) => (
+                  <ReviewBox
+                    key={user.id}
+                    profile={Profile1}
+                    name={user.name}
+                    text={user.body}
+                    date={
+                      user.postId +
+                      "/" +
+                      user.id +
+                      "/" +
+                      Math.floor(Math.random() * 2000 + 1000)
+                    }
+                  />
+                ))}
           </div>
         </div>
       </section>
