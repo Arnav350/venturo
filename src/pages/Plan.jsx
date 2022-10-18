@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../App.css";
 import "./Plan.css";
 import PlanCard from "../components/PlanCard.jsx";
 
 function Plan() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section>

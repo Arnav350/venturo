@@ -1,7 +1,7 @@
 import React from "react";
 import Bullet1 from "../assets/bullet1.png";
 
-function About_Reason({ title, para }) {
+function AboutReason({ title, para }) {
   return (
     <div className="reason">
       <figure className="reason-fig">
@@ -15,4 +15,4 @@ function About_Reason({ title, para }) {
   );
 }
 
-export default About_Reason;
+export default AboutReason;

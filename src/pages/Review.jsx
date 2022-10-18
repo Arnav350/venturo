@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../App.css";
 import "./Review.css";
-import Review_Box from "../components/Review_Box.jsx";
+import ReviewBox from "../components/ReviewBox.jsx";
 import Profile1 from "../assets/profile1.png";
 
 function Review() {
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     getUsers();
+    setLoading(false);
   }, []);
 
   async function getUsers() {
@@ -26,7 +29,7 @@ function Review() {
           <h1 className="review-title">Reviews</h1>
           <div className="review-container">
             {users.map((user) => (
-              <Review_Box
+              <ReviewBox
                 key={user.id}
                 profile={Profile1}
                 name={user.name}

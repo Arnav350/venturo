@@ -1,6 +1,6 @@
 import React from "react";
 
-function Faq_Text({ question, answer }) {
+function FaqText({ question, answer }) {
   return (
     <div className="faq-text">
       <p className="faq-question">
@@ -13,4 +13,4 @@ function Faq_Text({ question, answer }) {
   );
 }
 
-export default Faq_Text;
+export default FaqText;

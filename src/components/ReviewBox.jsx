@@ -1,7 +1,7 @@
 import React from "react";
 import Stars from "../assets/stars.png";
 
-function Review_Box({ profile, name, text, date }) {
+function ReviewBox({ profile, name, text, date }) {
   return (
     <div className="review-box">
       <figure className="review-fig">
@@ -21,4 +21,4 @@ function Review_Box({ profile, name, text, date }) {
   );
 }
 
-export default Review_Box;
+export default ReviewBox;

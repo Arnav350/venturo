@@ -2,6 +2,10 @@
 
 /* review */
 
+.review {
+  min-height: calc(100vh - 100px);
+}
+
 .review-title {
   font-size: 44px;
   text-align: center;

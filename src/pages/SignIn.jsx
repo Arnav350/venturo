@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SignIn.css";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 function SignIn() {
   const [type, setType] = useState("password");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function showPass() {
     if (type === "password") {

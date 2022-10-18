@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./Faq.css";
-import Faq_Text from "../components/Faq_Text.jsx";
+import FaqText from "../components/FaqText.jsx";
 
 function Faq() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section>
         <div className="faq container">
           <h1 className="faq-title">Frequently Asked Questions</h1>
           <div className="faq-box">
-            <Faq_Text
+            <FaqText
               question="How much does tutoring from Venturo
                 cost?"
               answer={[
@@ -26,14 +30,14 @@ function Faq() {
                 "it can be as low as $15!",
               ]}
             />
-            <Faq_Text
+            <FaqText
               question="How should I pay for a tutoring
                 session?"
               answer="We accept payment on Paypal, Apple
                 Pay, Zelle, and Cashapp. Payment must be sent before the first
                 session."
             />
-            <Faq_Text
+            <FaqText
               question="What subjects are offered at
                 Venturo?"
               answer="We teach any subject that you want

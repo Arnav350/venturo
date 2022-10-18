@@ -6,6 +6,10 @@ import Math from "../assets/math.jpg";
 import Steps from "../assets/steps.gif";
 
 function Main() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section>

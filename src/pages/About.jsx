@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./About.css";
-import About_Reason from "../components/About_Reason.jsx";
+import AboutReason from "../components/AboutReason.jsx";
 import Mission from "../assets/mission.jpg";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section>
@@ -35,16 +39,16 @@ function About() {
             </figure>
             <div className="why-box">
               <h1 className="why-title">Why Choose Us?</h1>
-              <About_Reason
+              <AboutReason
                 title="Reason 1"
                 para="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem numquam asperiores vitae animi iure voluptas"
               />
-              <About_Reason
+              <AboutReason
                 title="Reason 2"
                 para="Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Quidem numquam asperiores vitae animi iure voluptas"
               />
-              <About_Reason
+              <AboutReason
                 title="Reason 3"
                 para="Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Quidem numquam asperiores vitae animi iure voluptas"
