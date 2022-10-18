@@ -35,7 +35,7 @@ function Footer() {
               </li>
               <li>
                 <Link to="/Plan" className="footer-a">
-                  Plan
+                  Plans
                 </Link>
               </li>
             </ul>

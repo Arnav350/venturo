@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 
-function Plan_Card({
+function PlanCard({
   time = "Biweekly",
   price,
   ses = "/Session",
@@ -39,4 +39,4 @@ function Plan_Card({
   );
 }
 
-export default Plan_Card;
+export default PlanCard;

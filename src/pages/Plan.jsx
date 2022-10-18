@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import "./Plan.css";
-import Plan_Card from "../components/Plan_Card.jsx";
+import PlanCard from "../components/PlanCard.jsx";
 
 function Plan() {
   return (
@@ -10,11 +10,11 @@ function Plan() {
         <div className="plan container">
           <h1 className="plan-title">Payment Plans</h1>
           <div className="plan-box">
-            <Plan_Card time="Weekly" price="$22" />
-            <Plan_Card price="$20" />
-            <Plan_Card price="$15" num="Group Lesson" third={false} />
-            <Plan_Card time="Weekly" price="$25" length="Half Hour Sessions" />
-            <Plan_Card
+            <PlanCard time="Weekly" price="$22" />
+            <PlanCard price="$20" />
+            <PlanCard price="$15" num="Group Lesson" third={false} />
+            <PlanCard time="Weekly" price="$25" length="Half Hour Sessions" />
+            <PlanCard
               time="Custom"
               price="$--"
               ses="Click for an estimate"

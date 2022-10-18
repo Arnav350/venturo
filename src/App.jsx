@@ -1,4 +1,4 @@
-import React, { components, props } from "react";
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav.jsx";
@@ -9,6 +9,7 @@ import Donate from "./pages/Donate.jsx";
 import Faq from "./pages/Faq.jsx";
 import Plan from "./pages/Plan.jsx";
 import Review from "./pages/Review.jsx";
+import SignIn from "./pages/SignIn";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Faq" element={<Faq />} />
           <Route path="/Plan" element={<Plan />} />
           <Route path="/Review" element={<Review />} />
+          <Route path="/SignIn" element={<SignIn />} />
         </Routes>
         <Footer />
       </Router>
