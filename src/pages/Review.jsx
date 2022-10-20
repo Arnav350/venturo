@@ -4,6 +4,7 @@ import "../App.css";
 import "./Review.css";
 import ReviewBox from "../components/ReviewBox.jsx";
 import Profile1 from "../assets/profile1.png";
+import Logo from "../assets/logo.png";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -30,6 +31,21 @@ function Review() {
       <section>
         <div className="review container">
           <h1 className="review-title">Reviews</h1>
+          <div className="review-top">
+            <div className="review-write">
+              <p className="review-para">
+                We are always looking for feedback so please let us know what
+                you like or what we can do better at Venturo!
+              </p>
+              <button className="review-button blue-button">
+                Write a Review
+              </button>
+            </div>
+            <figure className="review-logo">
+              <img src={Logo} alt="Logo" className="review-img" />
+            </figure>
+          </div>
+          <img src="" alt="" />
           <div className="review-container">
             {loading
               ? [...Array(num)].map((elem, index) => (
