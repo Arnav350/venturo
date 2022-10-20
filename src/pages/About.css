@@ -36,7 +36,8 @@
 }
 
 .mission-fig {
-  width: 60%;
+  max-width: 560px;
+  width: 100%;
 }
 
 .mission-img {
@@ -60,7 +61,8 @@
 }
 
 .why-fig {
-  width: 55%;
+  max-width: 530px;
+  width: 100%;
 }
 
 .why-img {

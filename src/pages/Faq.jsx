@@ -20,7 +20,7 @@ function Faq() {
                 cost?"
               answer={[
                 "With individual sessions the price is set at $25 but with the purchase of different",
-                <span>
+                <span key={1}>
                   &nbsp;
                   <Link to="/Plan" className="faq-link">
                     plans

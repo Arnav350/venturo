@@ -47,7 +47,8 @@
 }
 
 .info-fig {
-  flex: 1;
+  max-width: 500px;
+  width: 100%;
 }
 
 .info-pic {
@@ -69,11 +70,11 @@
 
 .steps-fig {
   padding: 16px 24px;
-  height: 360px;
+  max-height: 360px;
+  height: 100%;
 }
 
 .steps-pic {
-  max-width: 600px;
   width: 100%;
 }
 
