@@ -46,6 +46,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .blue-button:hover {
   background-color: #34ebcd;
   border: #34ebcd solid;

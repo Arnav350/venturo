@@ -9,11 +9,11 @@ function Nav() {
   return (
     <nav className="nav-bar">
       <Link to="/" className="nav-title">
-        <figure className="nav-fig">
-          <img src={Logo} alt="Logo" className="nav-logo" />
+        <figure className="nav-logo">
+          <img src={Logo} alt="Logo" className="nav-img" />
         </figure>
-        <figure className="nav-fig">
-          <img src={Name} alt="Name" className="nav-name" />
+        <figure className="nav-name">
+          <img src={Name} alt="Name" className="nav-img" />
         </figure>
       </Link>
       <ul className="nav-ul">

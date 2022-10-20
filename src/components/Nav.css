@@ -14,11 +14,20 @@
 
 .nav-title {
   display: flex;
+  max-width: 280px;
+  width: 100%;
 }
 
 .nav-logo {
-  width: 100%;
   max-width: 80px;
+}
+
+.nav-name {
+  max-width: 200px;
+}
+
+.nav-img {
+  width: 100%;
 }
 
 .nav-name {

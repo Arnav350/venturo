@@ -11,7 +11,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 function Review() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const num = 3;
+  const [visible, setVisible] = useState(3);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,7 +48,7 @@ function Review() {
           <img src="" alt="" />
           <div className="review-container">
             {loading
-              ? [...Array(num)].map((elem, index) => (
+              ? [...Array(3)].map((elem, index) => (
                   <ReviewBox
                     key={index}
                     profile={
@@ -61,21 +61,29 @@ function Review() {
                     skeleton={true}
                   />
                 ))
-              : users.map((user) => (
-                  <ReviewBox
-                    key={user.id}
-                    profile={Profile1}
-                    name={user.name}
-                    text={user.body}
-                    date={
-                      user.postId +
-                      "/" +
-                      user.id +
-                      "/" +
-                      Math.floor(Math.random() * 2000 + 1000)
-                    }
-                  />
-                ))}
+              : users
+                  .slice(0, visible)
+                  .map((user) => (
+                    <ReviewBox
+                      key={user.id}
+                      profile={Profile1}
+                      name={user.name}
+                      text={user.body}
+                      date={
+                        user.postId +
+                        "/" +
+                        user.id +
+                        "/" +
+                        Math.floor(Math.random() * 2000 + 1000)
+                      }
+                    />
+                  ))}
+            <button
+              className="review-load blue-button"
+              onClick={() => setVisible((prevValue) => prevValue + 3)}
+            >
+              Load More
+            </button>
           </div>
         </div>
       </section>
