@@ -10,24 +10,26 @@ function Plan() {
 
   return (
     <>
-      <section>
-        <div className="plan container">
-          <h1 className="plan-title">Payment Plans</h1>
-          <div className="plan-box">
-            <PlanCard time="Weekly" price="$22" />
-            <PlanCard price="$20" />
-            <PlanCard price="$15" num="Group Lessons" third={false} />
-            <PlanCard time="Weekly" price="$25" length="Half Hour Sessions" />
-            <PlanCard
-              time="Custom"
-              price="$--"
-              ses="Click for an estimate"
-              length="Any Length"
-              third={false}
-            />
+      <main>
+        <section>
+          <div className="plan container">
+            <h1 className="plan-title">Payment Plans</h1>
+            <div className="plan-box">
+              <PlanCard time="Weekly" price="$22" />
+              <PlanCard price="$20" />
+              <PlanCard price="$15" num="Group Lessons" third={false} />
+              <PlanCard time="Weekly" price="$25" length="Half Hour Sessions" />
+              <PlanCard
+                time="Custom"
+                price="$--"
+                ses="Click for an estimate"
+                length="Any Length"
+                third={false}
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </>
   );
 }

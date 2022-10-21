@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./Main.css";
@@ -12,9 +12,21 @@ function Main() {
   }, []);
 
   function openSignIn() {
-    document.querySelector(".signin-card").style.visibility = "visible";
-    // document.querySelector(".signin-card").style.display = "inline";
+    let winWidth = window.innerWidth;
+    let docWidth = document.documentElement.clientWidth;
+    let scrollWidth = winWidth - docWidth;
+
+    console.log(winWidth);
+    console.log(docWidth);
+    console.log(scrollWidth);
+
+    scrollWidth += "px";
+    document.querySelector("body").style.paddingRight = scrollWidth;
+
+    document.querySelector(".signin-card").style.zIndex = 1;
     document.querySelector("main").style.filter = "blur(10px)";
+    document.querySelector("main").style.pointerEvents = "none";
+    document.querySelector("body").style.overflow = "hidden";
     window.scrollTo(0, 0);
   }
 

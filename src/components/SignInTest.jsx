@@ -20,9 +20,12 @@ function SignInTest() {
   }
 
   function setSignIn() {
-    document.querySelector(".signin-card").style.visibility = "hidden";
-    // document.querySelector(".signin-card").style.display = "none";
+    document.querySelector("body").style.paddingRight = 0;
+
+    document.querySelector(".signin-card").style.zIndex = -1;
     document.querySelector("main").style.filter = `blur(0px)`;
+    document.querySelector("main").style.pointerEvents = "all";
+    document.querySelector("body").style.overflow = "visible";
   }
 
   return (

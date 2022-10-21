@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Nav></Nav>
+        <Nav />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/About" element={<About />} />
