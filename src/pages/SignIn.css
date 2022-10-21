@@ -5,10 +5,22 @@
   height: 800px;
 }
 
-.signin-title {
+.signin-top {
+  position: relative;
+}
+
+.signin-exit {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  font-size: 24px;
+}
+
+/* .signin-title {
   font-size: 44px;
   text-align: center;
-}
+} */
 
 .signin-card {
   position: absolute;

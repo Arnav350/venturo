@@ -57,15 +57,14 @@
 
 /* steps */
 
-.steps {
-  display: flex;
-
-}
-
 .steps-title {
   font-size: 44px;
   text-align: center;
   margin-bottom: 60px;
+}
+
+.steps-box {
+  display: flex;
 }
 
 .steps-fig {
