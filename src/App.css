@@ -64,6 +64,10 @@ button {
   border: #34ebcd solid;
 }
 
+.blue-text:hover {
+  color: #34ebcd;
+}
+
 .white-button:hover {
   color: #34ebcd;
   border: #e0e2e6 solid;
@@ -84,14 +88,25 @@ button {
 
 .signin-top {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .signin-exit {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 12px;
+  cursor: pointer;
+  right: 16px;
+  transform: translateX(50%);
   font-size: 24px;
+  transition: font-size 200ms ease;
+}
+
+.signin-exit:hover {
+  font-size: 30px;
+}
+
+.signin-exit:active {
+  font-size: 0px;
 }
 
 /* .signin-title {
@@ -102,7 +117,7 @@ button {
 .signin-card {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: calc(50% + 50px);
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
@@ -157,6 +172,10 @@ button {
   cursor: pointer;
 }
 
+.signin-eye:hover {
+  color: #acafb5;
+}
+
 .signin-button {
   color: #ffffff;
   background-color: #38d9c2;
@@ -171,6 +190,7 @@ button {
 .signin-remember {
   color: #38d9c2;
   text-align: center;
+  transition: all 200ms ease;
 }
 
 .signin-acc {
@@ -181,4 +201,5 @@ button {
 .signin-signup {
   color: #38d9c2;
   text-align: right;
+  transition: all 200ms ease;
 }

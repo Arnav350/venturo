@@ -4,7 +4,7 @@ import "../App.css";
 import "./Main.css";
 import Math from "../assets/math.jpg";
 import Steps from "../assets/steps.gif";
-import SignInTest from "../components/SignInTest.jsx";
+import SignIn from "../components/SignIn.jsx";
 
 function Main() {
   useEffect(() => {
@@ -15,10 +15,6 @@ function Main() {
     let winWidth = window.innerWidth;
     let docWidth = document.documentElement.clientWidth;
     let scrollWidth = winWidth - docWidth;
-
-    console.log(winWidth);
-    console.log(docWidth);
-    console.log(scrollWidth);
 
     scrollWidth += "px";
     document.querySelector("body").style.paddingRight = scrollWidth;
@@ -104,9 +100,12 @@ function Main() {
                     !
                   </p>
                 </div>
-                <Link to="/" className="steps-start blue-button">
+                <button
+                  className="steps-start blue-button"
+                  onClick={() => openSignIn()}
+                >
                   Get Started
-                </Link>
+                </button>
                 <Link to="/Faq" className="steps-more">
                   Learn more about Venturo's tutoring
                 </Link>
@@ -115,7 +114,7 @@ function Main() {
           </div>
         </section>
       </main>
-      <SignInTest />
+      <SignIn />
     </>
   );
 }

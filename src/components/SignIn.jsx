@@ -4,7 +4,7 @@ import "../pages/Main.css";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
 
-function SignInTest() {
+function SignIn() {
   const [type, setType] = useState("password");
 
   useEffect(() => {
@@ -47,14 +47,16 @@ function SignInTest() {
           )}
         </div>
         <Link className="signin-button blue-button">Sign In</Link>
-        <Link className="signin-remember">Don't remember your password?</Link>
+        <Link className="signin-remember blue-text">
+          Don't remember your password?
+        </Link>
         <p className="signin-acc">
           Need an Account?
-          <Link className="signin-signup"> Sign Up</Link>
+          <Link className="signin-signup blue-text"> Sign Up</Link>
         </p>
       </div>
     </>
   );
 }
 
-export default SignInTest;
+export default SignIn;

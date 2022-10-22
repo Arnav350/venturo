@@ -38,7 +38,7 @@ function Nav() {
           </Link>
         </li>
       </ul>
-      <Link to="/SignIn" className="nav-sign blue-button">
+      <Link to="/" className="nav-sign blue-button">
         Sign In
       </Link>
     </nav>

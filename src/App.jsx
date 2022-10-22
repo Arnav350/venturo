@@ -9,7 +9,6 @@ import Donate from "./pages/Donate.jsx";
 import Faq from "./pages/Faq.jsx";
 import Plan from "./pages/Plan.jsx";
 import Review from "./pages/Review.jsx";
-import SignIn from "./pages/SignIn";
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
           <Route path="/Faq" element={<Faq />} />
           <Route path="/Plan" element={<Plan />} />
           <Route path="/Review" element={<Review />} />
-          <Route path="/SignIn" element={<SignIn />} />
         </Routes>
         <Footer />
       </Router>
