@@ -4,27 +4,13 @@ import "../App.css";
 import "./Main.css";
 import Math from "../assets/math.jpg";
 import Steps from "../assets/steps.gif";
-import SignIn from "../components/SignIn.jsx";
+import Sign from "../components/Sign.jsx";
+import { openSign } from "../components/Utils.js";
 
 function Main() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  function openSignIn() {
-    let winWidth = window.innerWidth;
-    let docWidth = document.documentElement.clientWidth;
-    let scrollWidth = winWidth - docWidth;
-
-    scrollWidth += "px";
-    document.querySelector("body").style.paddingRight = scrollWidth;
-
-    document.querySelector(".signin-card").style.zIndex = 1;
-    document.querySelector("main").style.filter = "blur(10px)";
-    document.querySelector("main").style.pointerEvents = "none";
-    document.querySelector("body").style.overflow = "hidden";
-    window.scrollTo(0, 0);
-  }
 
   return (
     <>
@@ -42,13 +28,13 @@ function Main() {
               <div className="info-links">
                 <button
                   className="info-learn blue-button"
-                  onClick={() => openSignIn()}
+                  onClick={() => openSign("in")}
                 >
                   Start Learning
                 </button>
                 <button
                   className="info-vol white-button"
-                  onClick={() => openSignIn()}
+                  onClick={() => openSign("up")}
                 >
                   Volunteer
                 </button>
@@ -89,11 +75,11 @@ function Main() {
                     whiteboard features to work with your 1 on 1 tutor.
                   </p>
                   <p className="steps-step">
-                    <b>5. </b>Don't forget to leave a&nbsp;
+                    <b>5. </b>Don't forget to leave a{" "}
                     <Link to="/Review" className="steps-link">
                       review
-                    </Link>
-                    &nbsp;or a&nbsp;
+                    </Link>{" "}
+                    or a{" "}
                     <Link to="/Donate" className="steps-link">
                       donation
                     </Link>
@@ -102,7 +88,7 @@ function Main() {
                 </div>
                 <button
                   className="steps-start blue-button"
-                  onClick={() => openSignIn()}
+                  onClick={() => openSign("up")}
                 >
                   Get Started
                 </button>
@@ -114,7 +100,7 @@ function Main() {
           </div>
         </section>
       </main>
-      <SignIn />
+      <Sign />
     </>
   );
 }

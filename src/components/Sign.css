@@ -1,0 +1,159 @@
+/* SIGN */
+
+.signin-card,
+.signup-card {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  height: 550px;
+  background-color: #fcfcfc;
+  border-radius: 32px;
+  padding: 32px;
+  box-shadow: 0px 0px 3px;
+  z-index: -1;
+  opacity: 0;
+  transition: z-index 500ms, opacity 500ms, top 500ms;
+}
+
+.signin-top,
+.signup-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.signin-exit,
+.signup-exit {
+  position: absolute;
+  cursor: pointer;
+  right: 16px;
+  transform: translateX(50%);
+  font-size: 24px;
+  transition: font-size 200ms ease;
+}
+
+.signin-exit:hover,
+.signup-exit:hover {
+  font-size: 30px;
+}
+
+.signin-exit:active,
+.signup-exit:active {
+  font-size: 20px;
+}
+
+.signin-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-label,
+.signup-label {
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+
+.signin-email,
+.signin-password,
+.signup-email,
+.signup-password {
+  padding: 8px;
+  height: 36px;
+  width: 100%;
+  background-color: #fcfcfc;
+  border: 1px solid #c0c4cc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.signin-email:hover,
+.signin-password:hover,
+.signup-email:hover,
+.signup-password:hover {
+  border: 2px solid #afb3ba;
+}
+
+.signin-email:focus,
+.signin-password:focus,
+.signup-email:focus,
+.signup-password:focus {
+  border: 2px solid #38d9c2;
+}
+
+.signin-pass,
+.signup-pass {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signin-eye,
+.signup-eye {
+  position: absolute;
+  right: 12px;
+  font-size: 24px;
+  color: #c0c4cc;
+  cursor: pointer;
+}
+
+.signin-eye:hover,
+.signup-eye:hover {
+  color: #acafb5;
+}
+
+.signup-check {
+  padding-top: 8px;
+  font-size: 12px;
+  color: #ff2222;
+}
+
+.signin-button {
+  color: #ffffff;
+  background-color: #38d9c2;
+  padding: 8px 0px;
+  margin: 56px 0px;
+  text-align: center;
+  border: #38d9c2 solid;
+  border-radius: 6px;
+  transition: all 200ms ease;
+}
+
+.signup-button {
+  color: #ffffff;
+  background-color: #38d9c2;
+  padding: 8px 0px;
+  margin: 44px 0px;
+  text-align: center;
+  border: #38d9c2 solid;
+  border-radius: 6px;
+  transition: all 200ms ease;
+}
+
+.signin-remember {
+  color: #38d9c2;
+  text-align: center;
+  transition: all 200ms ease;
+}
+
+.signin-acc {
+  text-align: center;
+  padding-top: 32px;
+}
+
+.signup-acc {
+  text-align: center;
+}
+
+.signin-signup,
+.signup-signup {
+  color: #38d9c2;
+  text-align: right;
+  transition: all 200ms ease;
+}
