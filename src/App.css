@@ -28,6 +28,10 @@ label {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+label {
+  cursor: pointer;
+}
+
 main {
   transition: filter 500ms ease;
 }

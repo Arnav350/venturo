@@ -3,7 +3,7 @@ import "../App.css";
 import "./Sign.css";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
-import { closeSign } from "./Utils.js";
+import { openSign, closeSign } from "./Utils.js";
 
 function Sign() {
   const [type, setType] = useState("password");
@@ -20,15 +20,33 @@ function Sign() {
     }
   }
 
-  function signUpSubmit() {
+  function signUpPassword() {
     const pw = document.querySelector(".signup-password").value;
+    const pwc = document.querySelector(".signup-confirm").value;
     const check = document.querySelector(".signup-check");
     if (pw.length < 6) {
       check.innerHTML = "Password must be atleast 6 characters";
     } else if (pw.length > 15) {
       check.innerHTML = "Password must be at most 15 characters";
+    } else if (pw !== pwc && pwc !== "") {
+      check.innerHTML = "Passwords do not match";
     } else {
-      check.innerHTML = "yay";
+      check.innerHTML = "";
+    }
+  }
+
+  function signUpConfirm() {
+    const pw = document.querySelector(".signup-password").value;
+    const pwc = document.querySelector(".signup-confirm").value;
+    const check = document.querySelector(".signup-check");
+    if (pw !== pwc) {
+      check.innerHTML = "Passwords do not match";
+    } else if (pw.length < 6) {
+      check.innerHTML = "Password must be atleast 6 characters";
+    } else if (pw.length > 15) {
+      check.innerHTML = "Password must be at most 15 characters";
+    } else {
+      check.innerHTML = "";
     }
   }
 
@@ -51,6 +69,7 @@ function Sign() {
               <FaEyeSlash className="signin-eye" onClick={() => showPass()} />
             )}
           </div>
+          <p className="signin-check">Temp</p>
           <Link className="signin-button blue-button">Sign In</Link>
         </form>
         <Link className="signin-remember blue-text">
@@ -58,7 +77,16 @@ function Sign() {
         </Link>
         <p className="signin-acc">
           Need an Account?
-          <Link className="signin-signup blue-text"> Sign Up</Link>
+          <Link
+            className="signin-signup blue-text"
+            onClick={() => {
+              closeSign("in");
+              // openSign("up");
+            }}
+          >
+            {" "}
+            Sign Up
+          </Link>
         </p>
       </div>
 
@@ -69,25 +97,34 @@ function Sign() {
         </div>
         <form className="signup-form">
           <label className="signup-label">Email</label>
-          <input type="email" className="signup-email" />
+          <input type="email" required="required" className="signup-email" />
           <label className="signup-label">Password</label>
           <div className="signup-pass">
-            <input type={type} className="signup-password" />
+            <input
+              type={type}
+              required="required"
+              className="signup-password"
+              onBlur={() => signUpPassword()}
+            />
             {type === "password" ? (
               <FaEye className="signup-eye" onClick={() => showPass()} />
             ) : (
               <FaEyeSlash className="signup-eye" onClick={() => showPass()} />
             )}
           </div>
-          <p className="signup-check">Way</p>
           <label className="signup-label">Confirm Password</label>
-          <input type={type} className="signup-password" />
-          <Link
+          <input
+            type={type}
+            required="required"
+            className="signup-confirm"
+            onBlur={() => signUpConfirm()}
+          />
+          <p className="signup-check"></p>
+          <input
+            type="submit"
+            value="Sign Up"
             className="signup-button blue-button"
-            onClick={() => signUpSubmit()}
-          >
-            Sign Up
-          </Link>
+          />
         </form>
         <p className="signup-acc">
           Already have an account?

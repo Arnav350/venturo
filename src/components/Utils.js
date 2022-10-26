@@ -10,6 +10,11 @@ import "../components/Nav.css";
 import "../components/Footer.css";
 
 export const openSign = (input) => {
+  const signins = document.querySelector(".signin-card").style;
+  const signups = document.querySelector(".signup-card").style;
+  const bodys = document.querySelector("body").style;
+  const mains = document.querySelector("main").style;
+
   let winWidth = window.innerWidth;
   let docWidth = document.documentElement.clientWidth;
   let scrollWidth = winWidth - docWidth;
@@ -17,42 +22,53 @@ export const openSign = (input) => {
 
   signLeft += "%";
   scrollWidth += "px";
-  document.querySelector("body").style.paddingRight = scrollWidth;
+  bodys.paddingRight = scrollWidth;
 
   if (input === "in") {
-    document.querySelector(".signin-card").style.zIndex = 1;
-    document.querySelector(".signin-card").style.opacity = 1;
-    document.querySelector(".signin-card").style.top = "calc(50% + 50px)";
-    document.querySelector(".signin-card").style.left = signLeft;
+    signins.zIndex = 1;
+    signins.opacity = 1;
+    signins.top = "calc(50% + 50px)";
+    signins.left = signLeft;
   } else {
-    document.querySelector(".signup-card").style.zIndex = 1;
-    document.querySelector(".signup-card").style.opacity = 1;
-    document.querySelector(".signup-card").style.top = "calc(50% + 50px)";
-    document.querySelector(".signup-card").style.left = signLeft;
+    signups.zIndex = 1;
+    signups.opacity = 1;
+    signups.top = "calc(50% + 50px)";
+    signups.left = signLeft;
   }
 
-  document.querySelector("main").style.filter = "blur(10px)";
-  document.querySelector("main").style.pointerEvents = "none";
-  document.querySelector("body").style.overflow = "hidden";
+  mains.filter = "blur(10px)";
+  mains.pointerEvents = "none";
+  bodys.overflow = "hidden";
   window.scrollTo(0, 0);
 };
 
 export const closeSign = (input) => {
-  document.querySelector("body").style.paddingRight = 0;
+  const signins = document.querySelector(".signin-card").style;
+  const signups = document.querySelector(".signup-card").style;
+  const bodys = document.querySelector("body").style;
+  const mains = document.querySelector("main").style;
+
+  bodys.paddingRight = 0;
 
   if (input === "in") {
-    document.querySelector(".signin-card").style.zIndex = -1;
-    document.querySelector(".signin-card").style.opacity = 0;
-    document.querySelector(".signin-card").style.top = "70%";
-    document.querySelector(".signin-card").style.left = "50%";
+    signins.zIndex = -1;
+    signins.opacity = 0;
+    signins.top = "70%";
+    signins.left = "50%";
+    document.querySelector(".signin-email").value = "";
+    document.querySelector(".signin-password").value = "";
   } else {
-    document.querySelector(".signup-card").style.zIndex = -1;
-    document.querySelector(".signup-card").style.opacity = 0;
-    document.querySelector(".signup-card").style.top = "70%";
-    document.querySelector(".signup-card").style.left = "50%";
+    signups.zIndex = -1;
+    signups.opacity = 0;
+    signups.top = "70%";
+    signups.left = "50%";
+    document.querySelector(".signup-email").value = "";
+    document.querySelector(".signup-password").value = "";
+    document.querySelector(".signup-confirm").value = "";
+    document.querySelector(".signup-check").innerHTML = "";
   }
 
-  document.querySelector("main").style.filter = `blur(0px)`;
-  document.querySelector("main").style.pointerEvents = "all";
-  document.querySelector("body").style.overflow = "visible";
+  mains.filter = `blur(0px)`;
+  mains.pointerEvents = "all";
+  bodys.overflow = "visible";
 };
