@@ -4,6 +4,7 @@ import "./Nav.css";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import Name from "../assets/venturo.png";
+import { openSign } from "../components/Utils.js";
 
 function Nav() {
   return (
@@ -18,14 +19,14 @@ function Nav() {
       </Link>
       <ul className="nav-ul">
         <li className="nav-li">
-          <Link to="/" className="nav-header">
+          <a className="nav-header" onClick={() => openSign("up")}>
             Start Learning
-          </Link>
+          </a>
         </li>
         <li className="nav-li">
-          <Link to="/" className="nav-header">
+          <a className="nav-header" onClick={() => openSign("up")}>
             Volunteer
-          </Link>
+          </a>
         </li>
         <li className="nav-li">
           <Link to="/Donate" className="nav-header">
@@ -38,9 +39,9 @@ function Nav() {
           </Link>
         </li>
       </ul>
-      <Link to="/" className="nav-sign blue-button">
+      <button className="nav-sign blue-button" onClick={() => openSign("in")}>
         Sign In
-      </Link>
+      </button>
     </nav>
   );
 }

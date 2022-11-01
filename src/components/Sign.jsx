@@ -69,7 +69,7 @@ function Sign() {
               <FaEyeSlash className="signin-eye" onClick={() => showPass()} />
             )}
           </div>
-          <p className="signin-check">Temp</p>
+          <p className="signin-check"></p>
           <Link className="signin-button blue-button">Sign In</Link>
         </form>
         <Link className="signin-remember blue-text">

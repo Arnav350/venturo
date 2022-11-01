@@ -19,32 +19,32 @@ function Donate() {
                 <h3>Help us provide tutoring around the globe</h3>
               </div>
               <div className="donate-box">
-                <div className="donate-amount gray-button">
+                <button className="donate-amount">
                   <p>$25</p>
-                </div>
-                <div className="donate-amount gray-button">
+                </button>
+                <button className="donate-amount">
                   <p>$50</p>
-                </div>
-                <div className="donate-amount gray-button">
+                </button>
+                <button className="donate-amount">
                   <p>$100</p>
-                </div>
-                <div className="donate-amount gray-button">
+                </button>
+                <button className="donate-amount">
                   <p>$250</p>
-                </div>
-                <div className="donate-amount gray-button">
+                </button>
+                <button className="donate-amount">
                   <p>$1000</p>
-                </div>
-                <div className="donate-amount">
+                </button>
+                <button className="donate-amount">
                   <p>$</p>
                   <input type="text" className="donate-number" />
-                </div>
+                </button>
                 <div className="donate-box">
-                  <div className="donate-time gray-button">
+                  <button className="donate-time">
                     <p>Monthly</p>
-                  </div>
-                  <div className="donate-time gray-button">
+                  </button>
+                  <button className="donate-time">
                     <p>One Time</p>
-                  </div>
+                  </button>
                 </div>
               </div>
               <div className="donate-message">
@@ -55,6 +55,7 @@ function Donate() {
                 Submit
               </Link>
             </div>
+            <button className="donate-sign blue-button">Sign Up</button>
           </div>
         </section>
       </main>

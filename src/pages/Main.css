@@ -99,24 +99,10 @@
   position: relative;
   color: #000000;
   font-family: 'Nunito Sans', sans-serif;
-  /* text-decoration: underline; */
+  text-decoration: underline;
 }
 
-.steps-link::after {
-  content: "";
-  position: absolute;
-  height: 1.5px;
-  width: 100%;
-  bottom: 4px;
-  left: 0px;
-  background-color: #1d1e24;
-  transition: all 1000ms ease;
-}
 
-.steps-link:hover::after {
-  content: "";
-  animation: steps 1500ms infinite ease;
-}
 
 @keyframes steps {
   0% {
