@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../App.css";
 import "./About.css";
-import AboutReason from "../components/AboutReason.jsx";
 import Mission from "../assets/mission.jpg";
+import { openSign } from "../components/Utils.js";
+import Sign from "../components/Sign.jsx";
+import AboutReason from "../components/AboutReason.jsx";
 
 function About() {
   useEffect(() => {
@@ -57,16 +58,23 @@ function About() {
               </div>
             </div>
             <div className="bottom-links">
-              <Link to="/" className="bottom-learn blue-button">
+              <button
+                className="bottom-learn blue-button"
+                onClick={() => openSign("up")}
+              >
                 Start Learning
-              </Link>
-              <Link to="/" className="bottom-vol white-button">
+              </button>
+              <button
+                className="bottom-vol white-button"
+                onClick={() => openSign("up")}
+              >
                 Volunteer
-              </Link>
+              </button>
             </div>
           </div>
         </section>
       </main>
+      <Sign />
     </>
   );
 }

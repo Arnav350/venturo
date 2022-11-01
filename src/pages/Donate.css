@@ -98,17 +98,30 @@
   transition: all 300ms ease;
 }
 
-.donate-sign {
+.donate-links {
   position: absolute;
   top: 640px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.donate-learn {
   color: #ffffff;
   background-color: #38d9c2;
   border: #38d9c2 solid;
-  padding: 8px 48px;
-  font-size: 20px;
+  padding: 12px 20px;
   border-radius: 20px;
-  margin: 16px auto;
+  font-size: 20px;
+  margin-right: 24px;
+  transition: all 300ms ease;
+}
+
+.donate-vol {
+  color: #38d9c2;
+  background-color: #ffffff;
+  border: #d7d8de solid;
+  padding: 12px 42px;
+  border-radius: 20px;
+  font-size: 20px;
   transition: all 300ms ease;
 }

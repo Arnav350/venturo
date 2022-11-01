@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./Faq.css";
+import { openSign } from "../components/Utils.js";
+import Sign from "../components/Sign.jsx";
 import FaqText from "../components/FaqText.jsx";
 
 function Faq() {
@@ -45,9 +47,24 @@ function Faq() {
                 from Kindergarten to 8th Grade."
               />
             </div>
+            <div className="faq-links">
+              <button
+                className="faq-learn blue-button"
+                onClick={() => openSign("up")}
+              >
+                Start Learning
+              </button>
+              <button
+                className="faq-vol white-button"
+                onClick={() => openSign("up")}
+              >
+                Volunteer
+              </button>
+            </div>
           </div>
         </section>
       </main>
+      <Sign />
     </>
   );
 }

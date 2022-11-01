@@ -62,6 +62,8 @@ a {
 
 button {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .blue-button:hover {

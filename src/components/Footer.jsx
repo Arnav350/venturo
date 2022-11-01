@@ -19,14 +19,10 @@ function Footer() {
             <h3 className="footer-title">LEARN MORE</h3>
             <ul className="footer-learn">
               <li className="footer-li">
-                <Link to="" className="footer-a">
-                  Enroll a Student
-                </Link>
+                <button className="footer-a">Enroll a Student</button>
               </li>
               <li className="footer-li">
-                <Link to="" className="footer-a">
-                  Become a Tutor
-                </Link>
+                <button className="footer-a">Become a Tutor</button>
               </li>
               <li className="footer-li">
                 <Link to="/Donate" className="footer-a">

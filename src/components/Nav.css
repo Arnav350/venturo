@@ -58,6 +58,7 @@
 .nav-header {
   position: relative;
   color: #000000;
+  font-size: 16px;
 }
 
 .nav-header::after {

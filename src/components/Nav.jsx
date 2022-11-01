@@ -19,14 +19,14 @@ function Nav() {
       </Link>
       <ul className="nav-ul">
         <li className="nav-li">
-          <a className="nav-header" onClick={() => openSign("up")}>
+          <button className="nav-header" onClick={() => openSign("up")}>
             Start Learning
-          </a>
+          </button>
         </li>
         <li className="nav-li">
-          <a className="nav-header" onClick={() => openSign("up")}>
+          <button className="nav-header" onClick={() => openSign("up")}>
             Volunteer
-          </a>
+          </button>
         </li>
         <li className="nav-li">
           <Link to="/Donate" className="nav-header">

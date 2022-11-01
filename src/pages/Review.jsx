@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../App.css";
 import "./Review.css";
-import ReviewBox from "../components/ReviewBox.jsx";
 import Profile1 from "../assets/profile1.png";
 import Logo from "../assets/logo.png";
+import { openSign } from "../components/Utils.js";
+import Sign from "../components/Sign.jsx";
+import ReviewBox from "../components/ReviewBox.jsx";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -79,16 +81,32 @@ function Review() {
                         }
                       />
                     ))}
+
               <button
                 className="review-load blue-button"
                 onClick={() => setVisible((prevValue) => prevValue + 3)}
               >
                 Load More
               </button>
+              <div className="review-links">
+                <button
+                  className="review-learn blue-button"
+                  onClick={() => openSign("up")}
+                >
+                  Start Learning
+                </button>
+                <button
+                  className="review-vol white-button"
+                  onClick={() => openSign("up")}
+                >
+                  Volunteer
+                </button>
+              </div>
             </div>
           </div>
         </section>
       </main>
+      <Sign />
     </>
   );
 }

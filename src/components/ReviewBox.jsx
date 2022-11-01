@@ -13,7 +13,7 @@ function ReviewBox({
     if (skeleton) {
       document.querySelector(".review-date").style.paddingRight = "0px";
     }
-  }, []);
+  }, [skeleton]);
 
   return (
     <div className="review-box">

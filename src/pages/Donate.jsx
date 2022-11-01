@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "../App.css";
 import "./Donate.css";
+import { openSign } from "../components/Utils.js";
+import Sign from "../components/Sign.jsx";
 import { Link } from "react-router-dom";
 
 function Donate() {
@@ -55,10 +57,24 @@ function Donate() {
                 Submit
               </Link>
             </div>
-            <button className="donate-sign blue-button">Sign Up</button>
+            <div className="donate-links">
+              <button
+                className="donate-learn blue-button"
+                onClick={() => openSign("up")}
+              >
+                Start Learning
+              </button>
+              <button
+                className="donate-vol white-button"
+                onClick={() => openSign("up")}
+              >
+                Volunteer
+              </button>
+            </div>
           </div>
         </section>
       </main>
+      <Sign />
     </>
   );
 }
