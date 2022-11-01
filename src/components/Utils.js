@@ -54,14 +54,14 @@ export const closeSign = (input) => {
     signins.zIndex = -1;
     signins.opacity = 0;
     signins.top = "70%";
-    signins.left = "50%";
+    signins.left = signups.left;
     document.querySelector(".signin-email").value = "";
     document.querySelector(".signin-password").value = "";
   } else {
     signups.zIndex = -1;
     signups.opacity = 0;
     signups.top = "70%";
-    signups.left = "50%";
+    signups.left = signins.left;
     document.querySelector(".signup-email").value = "";
     document.querySelector(".signup-password").value = "";
     document.querySelector(".signup-confirm").value = "";

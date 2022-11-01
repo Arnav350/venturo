@@ -80,8 +80,8 @@ function Sign() {
           <Link
             className="signin-signup blue-text"
             onClick={() => {
+              openSign("up");
               closeSign("in");
-              // openSign("up");
             }}
           >
             {" "}
@@ -128,7 +128,16 @@ function Sign() {
         </form>
         <p className="signup-acc">
           Already have an account?
-          <Link className="signup-signup blue-text"> Sign In</Link>
+          <Link
+            className="signup-signup blue-text"
+            onClick={() => {
+              openSign("in");
+              closeSign("up");
+            }}
+          >
+            {" "}
+            Sign In
+          </Link>
         </p>
       </div>
     </>
