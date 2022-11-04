@@ -119,12 +119,13 @@
   color: #ff2222;
 }
 
-.signin-button {
+.signin-button,
+.signup-button,
+.signup-invalid {
   cursor: pointer;
   color: #ffffff;
   background-color: #38d9c2;
   padding: 8px 0px;
-  margin: 56px 0px;
   font-size: 16px;
   text-align: center;
   border: #38d9c2 solid;
@@ -132,17 +133,18 @@
   transition: all 200ms ease;
 }
 
+.signin-button {
+  margin: 56px 0px;
+}
+
 .signup-button {
-  cursor: pointer;
-  color: #ffffff;
-  background-color: #38d9c2;
-  padding: 8px 0px;
   margin: 36px 0px;
-  font-size: 16px;
-  text-align: center;
-  border: #38d9c2 solid;
-  border-radius: 6px;
-  transition: all 200ms ease;
+}
+
+.signup-invalid {
+  cursor: not-allowed;
+  background-color: gray;
+  border: gray solid;
 }
 
 .signin-remember {

@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { auth, db } from "./components/init.js";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import Main from "./pages/Main.jsx";
