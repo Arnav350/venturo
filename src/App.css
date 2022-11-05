@@ -79,3 +79,9 @@ button {
   color: #34ebcd;
   border: #e0e2e6 solid;
 }
+
+.gray-button:hover {
+  background-color: #3a3a3f;
+  border: #3a3a3f solid;
+  color: #f8f8f8;
+}

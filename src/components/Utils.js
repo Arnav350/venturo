@@ -9,7 +9,7 @@ import "../pages/Review.css";
 import "../components/Nav.css";
 import "../components/Footer.css";
 
-export const openSign = (input) => {
+export function openSign(input) {
   const signins = document.querySelector(".signin-card").style;
   const signups = document.querySelector(".signup-card").style;
   const bodys = document.querySelector("body").style;
@@ -43,9 +43,9 @@ export const openSign = (input) => {
   navs.pointerEvents = "none";
   bodys.overflow = "hidden";
   window.scrollTo(0, 0);
-};
+}
 
-export const closeSign = (input) => {
+export function closeSign(input) {
   const signins = document.querySelector(".signin-card").style;
   const signups = document.querySelector(".signup-card").style;
   const bodys = document.querySelector("body").style;
@@ -77,4 +77,4 @@ export const closeSign = (input) => {
   navs.filter = `blur(0px)`;
   navs.pointerEvents = "all";
   bodys.overflow = "visible";
-};
+}

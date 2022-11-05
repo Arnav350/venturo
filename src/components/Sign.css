@@ -120,8 +120,7 @@
 }
 
 .signin-button,
-.signup-button,
-.signup-invalid {
+.signup-button {
   cursor: pointer;
   color: #ffffff;
   background-color: #38d9c2;
@@ -141,10 +140,8 @@
   margin: 36px 0px;
 }
 
-.signup-invalid {
+.gray-button:hover {
   cursor: not-allowed;
-  background-color: gray;
-  border: gray solid;
 }
 
 .signin-remember {

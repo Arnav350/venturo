@@ -47,17 +47,9 @@
   transition: all 300ms ease;
 }
 
-.donate-amount:hover,
-.donate-time:hover {
+.gray-button:focus {
   background-color: #3a3a3f;
-  border: #3a3a3f solid 2px;
-  color: #f8f8f8;
-}
-
-.donate-amount:focus,
-.donate-time:focus {
-  background-color: #3a3a3f;
-  border: #3a3a3f solid 2px;
+  border: #3a3a3f solid;
   color: #f8f8f8;
 }
 

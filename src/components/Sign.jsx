@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import "./Sign.css";
 import { Link } from "react-router-dom";
-import { auth, db } from "./init.js";
+import { auth } from "./init.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -67,20 +67,15 @@ function Sign() {
     const email = document.querySelector(".signup-email").value;
     const pw = document.querySelector(".signup-password").value;
     const pwc = document.querySelector(".signup-confirm").value;
-    const check = document.querySelector(".signup-check").innerHTML;
-    button.className = "signup-button signup-invalid";
+    button.className = "signup-button gray-button";
     button.disabled = true;
     if (email !== "") {
       if (pw.length >= 6 && pw.length <= 15) {
-        if (pwc.length >= 6 && pwc.length <= 15) {
-          if (pw === pwc) {
-            if (check === "") {
-              button.className = "signup-button blue-button";
-              button.disabled = false;
-              setEmail(document.querySelector(".signup-email").value);
-              setPass(document.querySelector(".signup-password").value);
-            }
-          }
+        if (pw === pwc) {
+          button.className = "signup-button blue-button";
+          button.disabled = false;
+          setEmail(document.querySelector(".signup-email").value);
+          setPass(document.querySelector(".signup-password").value);
         }
       }
     }
@@ -95,19 +90,25 @@ function Sign() {
     });
   }, []);
 
-  function register() {
-    alert(userEmail);
-    createUserWithEmailAndPassword(auth, userEmail, userPass)
-      .then((user) => {
-        console.log(user);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  // function register(event) {
+  //   createUserWithEmailAndPassword(auth, userEmail, userPass)
+  //     .then((user) => {
+  //       console.log(user);
+  //       event.preventDefault();
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       event.preventDefault();
+  //     });
+  // }
+
+  function register(event) {
+    alert("hello!");
+    event.preventDefault();
   }
 
   function login() {
-    signInWithEmailAndPassword(auth, "email@email.com", "pass123")
+    signInWithEmailAndPassword(auth, userEmail, userPass)
       .then(({ user }) => {
         console.log(user);
         setUser(user);
@@ -129,7 +130,7 @@ function Sign() {
           <h1 className="signin-title">Sign In</h1>
           <FaTimes className="signin-exit" onClick={() => closeSign("in")} />
         </div>
-        <form className="signin-form">
+        <form className="signin-form" onSubmit={() => login()}>
           <label className="signin-label">Email</label>
           <input type="email" className="signin-email" required="required" />
           <label className="signin-label">Password</label>
@@ -174,13 +175,13 @@ function Sign() {
           <h1 className="signup-title">Sign Up</h1>
           <FaTimes className="signup-exit" onClick={() => closeSign("up")} />
         </div>
-        <form className="signup-form" onSubmit={() => register()}>
+        <form className="signup-form" onSubmit={register}>
           <label className="signup-label">Email</label>
           <input
             type="email"
             className="signup-email"
             required="required"
-            onBlur={() => signUpButton()}
+            onChange={() => signUpButton()}
           />
           <label className="signup-label">Password</label>
           <div className="signup-pass">
@@ -188,10 +189,8 @@ function Sign() {
               type={type}
               className="signup-password"
               required="required"
-              onBlur={() => {
-                signUpPassword();
-                signUpButton();
-              }}
+              onBlur={() => signUpPassword()}
+              onChange={() => signUpButton()}
             />
             {type === "password" ? (
               <FaEye className="signup-eye" onClick={() => showPass()} />
@@ -204,16 +203,15 @@ function Sign() {
             type={type}
             className="signup-confirm"
             required="required"
-            onBlur={() => {
-              signUpConfirm();
-              signUpButton();
-            }}
+            onBlur={() => signUpConfirm()}
+            onChange={() => signUpButton()}
           />
           <p className="signup-check"></p>
           <input
             type="submit"
             value="Sign Up"
-            className="signup-button signup-invalid"
+            className="signup-button gray-button"
+            disabled
           />
         </form>
         <p className="signup-acc">

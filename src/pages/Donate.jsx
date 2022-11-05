@@ -21,30 +21,30 @@ function Donate() {
                 <h3>Help us provide tutoring around the globe</h3>
               </div>
               <div className="donate-box">
-                <button className="donate-amount">
+                <button className="donate-amount gray-button">
                   <p>$25</p>
                 </button>
-                <button className="donate-amount">
+                <button className="donate-amount gray-button">
                   <p>$50</p>
                 </button>
-                <button className="donate-amount">
+                <button className="donate-amount gray-button">
                   <p>$100</p>
                 </button>
-                <button className="donate-amount">
+                <button className="donate-amount gray-button">
                   <p>$250</p>
                 </button>
-                <button className="donate-amount">
+                <button className="donate-amount gray-button">
                   <p>$1000</p>
                 </button>
-                <button className="donate-amount">
+                <button className="donate-amount gray-button">
                   <p>$</p>
                   <input type="text" className="donate-number" />
                 </button>
                 <div className="donate-box">
-                  <button className="donate-time">
+                  <button className="donate-time gray-button">
                     <p>Monthly</p>
                   </button>
-                  <button className="donate-time">
+                  <button className="donate-time gray-button">
                     <p>One Time</p>
                   </button>
                 </div>
