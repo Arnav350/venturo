@@ -9,8 +9,8 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
 import { openSign, closeSign } from "./Utils.js";
+import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
 
 function Sign() {
   const [type, setType] = useState("password");
@@ -90,24 +90,26 @@ function Sign() {
     });
   }, []);
 
-  // function register(event) {
-  //   createUserWithEmailAndPassword(auth, userEmail, userPass)
-  //     .then((user) => {
-  //       console.log(user);
-  //       event.preventDefault();
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //       event.preventDefault();
-  //     });
-  // }
-
-  function register(event) {
-    alert("hello!");
+  function signUp(event) {
     event.preventDefault();
+    const verify = document.querySelector(".signup-verify").style;
+    createUserWithEmailAndPassword(auth, userEmail, userPass)
+      .then((user) => {
+        console.log(user);
+        verify.zIndex = 2;
+        verify.opacity = 1;
+      })
+      .catch((error) => {
+        console.log(error);
+        document.querySelector(".signup-check").innerHTML =
+          "That email address is taken. Try another.";
+      });
   }
 
-  function login() {
+  function signIn(event) {
+    event.preventDefault();
+    setEmail(document.querySelector(".signin-email").value);
+    setPass(document.querySelector(".signin-password").value);
     signInWithEmailAndPassword(auth, userEmail, userPass)
       .then(({ user }) => {
         console.log(user);
@@ -118,7 +120,8 @@ function Sign() {
       });
   }
 
-  function logout() {
+  function logout(event) {
+    event.preventDefault();
     signOut(auth);
     setUser({});
   }
@@ -130,7 +133,7 @@ function Sign() {
           <h1 className="signin-title">Sign In</h1>
           <FaTimes className="signin-exit" onClick={() => closeSign("in")} />
         </div>
-        <form className="signin-form" onSubmit={() => login()}>
+        <form className="signin-form" onSubmit={signIn}>
           <label className="signin-label">Email</label>
           <input type="email" className="signin-email" required="required" />
           <label className="signin-label">Password</label>
@@ -141,9 +144,9 @@ function Sign() {
               required="required"
             />
             {type === "password" ? (
-              <FaEye className="signin-eye" onClick={() => showPass()} />
+              <FaEye className="signin-eye" onClick={showPass} />
             ) : (
-              <FaEyeSlash className="signin-eye" onClick={() => showPass()} />
+              <FaEyeSlash className="signin-eye" onClick={showPass} />
             )}
           </div>
           <p className="signin-check"></p>
@@ -175,13 +178,13 @@ function Sign() {
           <h1 className="signup-title">Sign Up</h1>
           <FaTimes className="signup-exit" onClick={() => closeSign("up")} />
         </div>
-        <form className="signup-form" onSubmit={register}>
+        <form className="signup-form" onSubmit={signUp}>
           <label className="signup-label">Email</label>
           <input
             type="email"
             className="signup-email"
             required="required"
-            onChange={() => signUpButton()}
+            onChange={signUpButton}
           />
           <label className="signup-label">Password</label>
           <div className="signup-pass">
@@ -189,13 +192,13 @@ function Sign() {
               type={type}
               className="signup-password"
               required="required"
-              onBlur={() => signUpPassword()}
-              onChange={() => signUpButton()}
+              onBlur={signUpPassword}
+              onChange={signUpButton}
             />
             {type === "password" ? (
-              <FaEye className="signup-eye" onClick={() => showPass()} />
+              <FaEye className="signup-eye" onClick={showPass} />
             ) : (
-              <FaEyeSlash className="signup-eye" onClick={() => showPass()} />
+              <FaEyeSlash className="signup-eye" onClick={showPass} />
             )}
           </div>
           <label className="signup-label">Confirm Password</label>
@@ -203,8 +206,8 @@ function Sign() {
             type={type}
             className="signup-confirm"
             required="required"
-            onBlur={() => signUpConfirm()}
-            onChange={() => signUpButton()}
+            onBlur={signUpConfirm}
+            onChange={signUpButton}
           />
           <p className="signup-check"></p>
           <input
@@ -226,6 +229,10 @@ function Sign() {
             Sign In
           </Link>
         </p>
+        <div className="signup-verify">
+          <h3 className="signup-sent">An email has been sent to {userEmail}</h3>
+          <button className="signup-resend blue-button">Resend</button>
+        </div>
       </div>
     </>
   );

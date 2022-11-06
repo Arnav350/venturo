@@ -51,6 +51,7 @@ export function closeSign(input) {
   const bodys = document.querySelector("body").style;
   const mains = document.querySelector("main").style;
   const navs = document.querySelector(".nav-bar").style;
+  const verify = document.querySelector(".signup-verify").style;
 
   bodys.paddingRight = 0;
 
@@ -66,6 +67,8 @@ export function closeSign(input) {
     signups.opacity = 0;
     signups.top = "60%";
     signups.left = signins.left;
+    verify.zIndex = -1;
+    verify.opacity = 0;
     document.querySelector(".signup-email").value = "";
     document.querySelector(".signup-password").value = "";
     document.querySelector(".signup-confirm").value = "";
