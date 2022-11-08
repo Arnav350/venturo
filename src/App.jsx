@@ -11,6 +11,8 @@ import Faq from "./pages/Faq.jsx";
 import Plan from "./pages/Plan.jsx";
 import Review from "./pages/Review.jsx";
 import Schedule from "./pages/Schedule.jsx";
+//test
+import Elementary from "./pages/Elementary";
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
           <Route path="/Plan" element={<Plan />} />
           <Route path="/Review" element={<Review />} />
           <Route path="/Schedule" element={<Schedule />} />
+          <Route path="/Elementary" element={<Elementary />} />
         </Routes>
         <Footer />
       </Router>
