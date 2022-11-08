@@ -81,7 +81,7 @@ button {
 }
 
 .gray-button:hover {
-  background-color: #3a3a3f;
-  border: #3a3a3f solid;
+  background-color: #444444;
+  border: #444444 solid;
   color: #f8f8f8;
 }
