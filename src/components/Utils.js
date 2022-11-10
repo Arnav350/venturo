@@ -1,11 +1,15 @@
+// import React from "react";
 import "../App.css";
 import "./Sign.css";
 import "../pages/About.css";
+import "../pages/Account.css";
 import "../pages/Donate.css";
+import "../pages/Elementary.css";
 import "../pages/Faq.css";
 import "../pages/Main.css";
 import "../pages/Plan.css";
 import "../pages/Review.css";
+import "../pages/Schedule.css";
 import "../components/Nav.css";
 import "../components/Footer.css";
 
@@ -81,3 +85,11 @@ export function closeSign(input) {
   navs.pointerEvents = "all";
   bodys.overflow = "visible";
 }
+
+// export function Utils() {
+//   const [test, setTest] = React.useState(true);
+
+//   function testing() {
+//     console.log(test);
+//   }
+// }
