@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../App.css";
 import "./Account.css";
+import Profile1 from "../assets/profile1.png";
 
 function Account() {
   useEffect(() => {
@@ -11,14 +12,20 @@ function Account() {
     <>
       <main>
         <section>
-          <div>
-            <h1>Personal Information</h1>
-            <div>
-              <img src="" alt="Profile Picture" />
-              <h3>Email Address</h3>
-              <p>Email</p>
-              <h3>Password</h3>
-              <p>Password</p>
+          <div className="account container">
+            <h1 className="account-title">Personal Information</h1>
+            <div className="account-card">
+              <img src={Profile1} alt="Profile" className="account-profile" />
+              <div className="account-row">
+                <h3 className="account-header">Email Address</h3>
+                <button className="account-edit">Edit</button>
+              </div>
+              <p className="account-email">Email</p>
+              <div className="account-row">
+                <h3 className="account-header">Password</h3>
+                <button className="account-edit">Edit</button>
+              </div>
+              <p className="account-password">Password</p>
             </div>
           </div>
         </section>
