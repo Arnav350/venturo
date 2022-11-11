@@ -42,7 +42,7 @@
   align-items: center;
 }
 
-.account-header {
+.account-item {
   padding: 24px 0px;
   font-weight: 400;
 }
@@ -58,6 +58,18 @@
   transition: all 300ms ease;
 }
 
+.account-first,
+.account-last {
+  background-color: #dddddd;
+  padding: 6px;
+  border: 1px #888888 solid;
+  border-radius: 8px;
+}
+
+.account-first {
+  margin-right: 15%;
+}
+
 .account-pass {
   position: relative;
 }
@@ -65,10 +77,10 @@
 .account-email,
 .account-password {
   width: 100%;
-  background-color: #cccccc;
-  padding: 4px;
-  border: 2px #888888 solid;
-  border-radius: 4px;
+  background-color: #dddddd;
+  padding: 6px;
+  border: 1px #888888 solid;
+  border-radius: 8px;
 }
 
 .account-eye,

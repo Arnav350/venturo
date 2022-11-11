@@ -32,6 +32,10 @@ label {
   cursor: pointer;
 }
 
+input:focus {
+  outline: none;
+}
+
 main,
 .nav-bar {
   transition: filter 500ms ease;
