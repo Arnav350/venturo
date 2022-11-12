@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  sendEmailVerification,
 } from "firebase/auth";
 import { openSign, closeSign } from "./Utils.js";
 import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
@@ -98,12 +99,31 @@ function Sign() {
         console.log(user);
         verify.zIndex = 2;
         verify.opacity = 1;
+        sendEmailVerification(auth.currentUser);
       })
       .catch((error) => {
         console.log(error);
         document.querySelector(".signup-check").innerHTML =
           "That email address is taken. Try another.";
       });
+  }
+
+  // function signVerify(event) {
+  //   event.preventDefault();
+  //   sendEmailVerification(auth.currentUser)
+  //     .then((user) => {
+  //       console.log(user);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }
+
+  function test(event) {
+    event.preventDefault();
+    sendEmailVerification(auth.currentUser).then(() => {
+      alert("WOW!");
+    });
   }
 
   function signIn(event) {
@@ -175,6 +195,7 @@ function Sign() {
 
       <div className="signup-card">
         <div className="signup-top">
+          <button onClick={test}>HELLO</button>
           <h1 className="signup-title">Sign Up</h1>
           <FaTimes className="signup-exit" onClick={() => closeSign("up")} />
         </div>
