@@ -9,6 +9,7 @@ import {
   signOut,
   onAuthStateChanged,
   sendEmailVerification,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { openSign, closeSign } from "./Utils.js";
 import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
@@ -108,22 +109,15 @@ function Sign() {
       });
   }
 
-  // function signVerify(event) {
-  //   event.preventDefault();
-  //   sendEmailVerification(auth.currentUser)
-  //     .then((user) => {
-  //       console.log(user);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }
-
-  function test(event) {
+  async function forgotPassword(event) {
     event.preventDefault();
-    sendEmailVerification(auth.currentUser).then(() => {
-      alert("WOW!");
-    });
+    await sendPasswordResetEmail(auth, userEmail)
+      .then(() => {
+        alert("YAY!");
+      })
+      .catch((error) => {
+        alert("FUCK!");
+      });
   }
 
   function signIn(event) {
@@ -176,9 +170,9 @@ function Sign() {
             className="signin-button blue-button"
           />
         </form>
-        <Link className="signin-remember blue-text">
+        <button className="signin-remember blue-text" onClick={forgotPassword}>
           Don't remember your password?
-        </Link>
+        </button>
         <p className="signin-acc">
           Need an Account?{" "}
           <Link
@@ -195,7 +189,6 @@ function Sign() {
 
       <div className="signup-card">
         <div className="signup-top">
-          <button onClick={test}>HELLO</button>
           <h1 className="signup-title">Sign Up</h1>
           <FaTimes className="signup-exit" onClick={() => closeSign("up")} />
         </div>
