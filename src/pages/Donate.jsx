@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "../App.css";
 import "./Donate.css";
-import { openSign } from "../components/Utils.js";
 import Sign from "../components/Sign.jsx";
 import { Link } from "react-router-dom";
+import { openSign } from "../components/Utils.js";
 
 function Donate() {
   useEffect(() => {

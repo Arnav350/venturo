@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../App.css";
 import "./Sign.css";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { openSign, closeSign } from "./Utils.js";
+import { openSign, closeSign, Context } from "./Utils.js";
 import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
 
 function Sign() {
@@ -59,10 +59,10 @@ function Sign() {
     }
   }
 
-  const [user, setUser] = useState({});
+  const { user, setUser } = useContext(Context);
   const [loading, setLoading] = useState(true);
-  const [userEmail, setEmail] = useState("");
-  const [userPass, setPass] = useState("");
+  const { userEmail, setEmail } = useContext(Context);
+  const { userPass, setPass } = useContext(Context);
 
   function signUpButton() {
     const button = document.querySelector(".signup-button");

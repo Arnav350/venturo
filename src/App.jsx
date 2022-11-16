@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Context } from "./components/Utils.js";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import Main from "./pages/Main.jsx";
@@ -15,8 +16,21 @@ import Schedule from "./pages/Schedule.jsx";
 import Elementary from "./pages/Elementary";
 
 function App() {
+  const [user, setUser] = useState({});
+  const [userEmail, setEmail] = useState("");
+  const [userPass, setPass] = useState("");
+
   return (
-    <div>
+    <Context.Provider
+      value={{
+        user,
+        setUser,
+        userEmail,
+        setEmail,
+        userPass,
+        setPass,
+      }}
+    >
       <Router>
         <Nav />
         <Routes>
@@ -32,7 +46,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </div>
+    </Context.Provider>
   );
 }
 

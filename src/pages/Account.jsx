@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../App.css";
 import "./Account.css";
 import Profile1 from "../assets/profile1.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Context } from "../components/Utils.js";
 
 function Account() {
   const [type, setType] = useState("password");
+  const { userEmail, setEmail } = useContext(Context);
+  const { userPass, setPass } = useContext(Context);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -42,14 +45,24 @@ function Account() {
               </div>
               <h3 className="account-item">Email Address</h3>
               <label className="account-mail">
-                <input type="text" className="account-email" readOnly />
+                <input
+                  type="text"
+                  className="account-email"
+                  value={userEmail}
+                  readOnly
+                />
               </label>
               <div className="account-row">
                 <h3 className="account-item">Password</h3>
                 <button className="account-edit blue-button">Edit</button>
               </div>
               <label className="account-pass">
-                <input type="password" className="account-password" readOnly />
+                <input
+                  type="password"
+                  className="account-password"
+                  value={userPass}
+                  readOnly
+                />
                 {type === "password" ? (
                   <FaEye className="account-eye" onClick={showPass} />
                 ) : (
