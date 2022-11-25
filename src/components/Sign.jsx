@@ -11,7 +11,8 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { openSign, closeSign, Context } from "./Utils.js";
+import { openSign, closeSign } from "./Utils.js";
+import { Context } from "../App.jsx";
 import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
 
 function Sign() {

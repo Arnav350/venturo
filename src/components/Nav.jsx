@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../App.css";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import Name from "../assets/venturo.png";
+import { auth } from "./init.js";
 import { openSign } from "../components/Utils.js";
+import { Context } from "../App.jsx";
+import { signOut } from "firebase/auth";
 
 function Nav() {
+  const { user, setUser } = useContext(Context);
+  const { userEmail, setEmail } = useContext(Context);
+  const { userPass, setPass } = useContext(Context);
+
+  function logout(event) {
+    event.preventDefault();
+    signOut(auth);
+    setUser({});
+    setEmail("");
+    setPass("");
+  }
+
   return (
     <nav className="nav-bar">
       <Link to="/" className="nav-title">
@@ -39,9 +54,14 @@ function Nav() {
           </Link>
         </li>
       </ul>
-      <button className="nav-sign blue-button" onClick={() => openSign("in")}>
-        Sign In
-      </button>
+      {user != {} ? (
+        <button className="nav-sign blue-button" onClick={() => openSign("in")}>
+          Sign In
+        </button>
+      ) : (
+        <button onClick={logout}>{userEmail}</button>
+      )}
+      <button onClick={logout}>{userEmail}</button>
     </nav>
   );
 }

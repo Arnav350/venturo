@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Context } from "./components/Utils.js";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import Main from "./pages/Main.jsx";
@@ -51,3 +50,5 @@ function App() {
 }
 
 export default App;
+
+export const Context = createContext({});

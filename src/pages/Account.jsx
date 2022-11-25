@@ -3,7 +3,7 @@ import "../App.css";
 import "./Account.css";
 import Profile1 from "../assets/profile1.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Context } from "../components/Utils.js";
+import { Context } from "../App.jsx";
 
 function Account() {
   const [type, setType] = useState("password");

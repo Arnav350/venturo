@@ -1,4 +1,3 @@
-import React, { useState, createContext } from "react";
 import "../App.css";
 import "./Sign.css";
 import "../pages/About.css";
@@ -12,7 +11,6 @@ import "../pages/Review.css";
 import "../pages/Schedule.css";
 import "../components/Nav.css";
 import "../components/Footer.css";
-import Sign from "./Sign.jsx";
 
 export function openSign(input) {
   const signins = document.querySelector(".signin-card").style;
@@ -86,5 +84,3 @@ export function closeSign(input) {
   navs.pointerEvents = "all";
   bodys.overflow = "visible";
 }
-
-export const Context = createContext({});
