@@ -11,20 +11,20 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 function Review() {
-  const [users, setUsers] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [visible, setVisible] = useState(3);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    getUsers();
+    getReviews();
   }, []);
 
-  async function getUsers() {
+  async function getReviews() {
     const { data } = await axios.get(
       "https://jsonplaceholder.typicode.com/comments"
     );
-    setUsers(data);
+    setReviews(data);
     setLoading(false);
   }
 
@@ -51,7 +51,7 @@ function Review() {
             <img src="" alt="" />
             <div className="review-container">
               {loading
-                ? [...Array(3)].map((elem, index) => (
+                ? [...Array(visible)].map((elem, index) => (
                     <ReviewBox
                       key={index}
                       profile={
@@ -64,7 +64,7 @@ function Review() {
                       skeleton={true}
                     />
                   ))
-                : users
+                : reviews
                     .slice(0, visible)
                     .map((user) => (
                       <ReviewBox

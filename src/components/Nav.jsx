@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../App.css";
 import "./Nav.css";
 import { Link } from "react-router-dom";
@@ -7,19 +7,30 @@ import Name from "../assets/venturo.png";
 import { auth } from "./init.js";
 import { openSign } from "../components/Utils.js";
 import { Context } from "../App.jsx";
-import { signOut } from "firebase/auth";
+import { signOut, onAuthStateChanged } from "firebase/auth";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function Nav() {
+  const [loading, setLoading] = useState(true);
   const { user, setUser } = useContext(Context);
   const { userEmail, setEmail } = useContext(Context);
-  const { userPass, setPass } = useContext(Context);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, () => {
+      setLoading(false);
+    });
+  }, []);
 
   function logout(event) {
     event.preventDefault();
     signOut(auth);
     setUser({});
     setEmail("");
-    setPass("");
+  }
+
+  function consoleUser() {
+    console.log(user);
   }
 
   return (
@@ -54,7 +65,9 @@ function Nav() {
           </Link>
         </li>
       </ul>
-      {Object.keys(user) == 0 ? (
+      {loading ? (
+        <Skeleton height={64} width={100} />
+      ) : Object.keys(user) == 0 ? (
         <button
           className="nav-signin blue-button"
           onClick={() => openSign("in")}
@@ -66,6 +79,7 @@ function Nav() {
           {user.email.toUpperCase()[0]}
         </button>
       )}
+      <button onClick={consoleUser}>USER</button>
     </nav>
   );
 }
