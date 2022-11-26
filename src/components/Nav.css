@@ -45,13 +45,24 @@
   padding: 0px 16px;
 }
 
-.nav-sign {
+.nav-signin {
   color: #ffffff;
   background-color: #38d9c2;
   border: #38d9c2 solid;
   padding: 8px 20px;
   font-size: 16px;
   border-radius: 20px;
+  transition: all 200ms ease;
+}
+
+.nav-signout {
+  color: #ffffff;
+  background-color: #38d9c2;
+  border: #38d9c2 solid;
+  height: 64px;
+  width: 64px;
+  font-size: 32px;
+  border-radius: 50%;
   transition: all 200ms ease;
 }
 

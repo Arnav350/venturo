@@ -17,7 +17,6 @@ import Elementary from "./pages/Elementary";
 function App() {
   const [user, setUser] = useState({});
   const [userEmail, setEmail] = useState("");
-  const [userPass, setPass] = useState("");
 
   return (
     <Context.Provider
@@ -26,8 +25,6 @@ function App() {
         setUser,
         userEmail,
         setEmail,
-        userPass,
-        setPass,
       }}
     >
       <Router>

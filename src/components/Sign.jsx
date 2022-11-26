@@ -63,7 +63,6 @@ function Sign() {
   const { user, setUser } = useContext(Context);
   const [loading, setLoading] = useState(true);
   const { userEmail, setEmail } = useContext(Context);
-  const { userPass, setPass } = useContext(Context);
 
   function signUpButton() {
     const button = document.querySelector(".signup-button");
@@ -78,7 +77,6 @@ function Sign() {
           button.className = "signup-button blue-button";
           button.disabled = false;
           setEmail(document.querySelector(".signup-email").value);
-          setPass(document.querySelector(".signup-password").value);
         }
       }
     }
@@ -96,7 +94,8 @@ function Sign() {
   function signUp(event) {
     event.preventDefault();
     const verify = document.querySelector(".signup-verify").style;
-    createUserWithEmailAndPassword(auth, userEmail, userPass)
+    const pw = document.querySelector(".signup-password").value;
+    createUserWithEmailAndPassword(auth, userEmail, pw)
       .then((user) => {
         console.log(user);
         verify.zIndex = 2;
@@ -123,12 +122,13 @@ function Sign() {
 
   function signIn(event) {
     event.preventDefault();
-    setEmail(document.querySelector(".signin-email").value);
-    setPass(document.querySelector(".signin-password").value);
-    signInWithEmailAndPassword(auth, userEmail, userPass)
+    const email = document.querySelector(".signin-email").value;
+    const pw = document.querySelector(".signin-password").value;
+    signInWithEmailAndPassword(auth, email, pw)
       .then(({ user }) => {
         console.log(user);
         setUser(user);
+        setEmail(email);
       })
       .catch((error) => {
         console.log(error.message);

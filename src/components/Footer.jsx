@@ -58,30 +58,35 @@ function Footer() {
           </div>
           <div className="footer-connect">
             <h3 className="footer-title">CONTACT</h3>
-            <ul className="footer-contact">
-              <li className="footer-icon">
-                <Link to="/" className="footer-a">
-                  <FaEnvelope />
+            <ul className="footer-contacts">
+              <li className="footer-li">
+                <Link to="/" className="footer-contact">
+                  <FaEnvelope className="footer-icon" />
+                  <p className="footer-text">Email</p>
                 </Link>
               </li>
-              <li className="footer-icon">
-                <Link to="/" className="footer-a">
-                  <FaFacebookF />
+              <li className="footer-li">
+                <Link to="/" className="footer-contact">
+                  <FaFacebookF className="footer-icon" />
+                  <p className="footer-text">Facebook</p>
                 </Link>
               </li>
-              <li className="footer-icon">
-                <Link to="/" className="footer-a">
-                  <FaInstagram />
+              <li className="footer-li">
+                <Link to="/" className="footer-contact">
+                  <FaInstagram className="footer-icon" />
+                  <p className="footer-text">Instagram</p>
                 </Link>
               </li>
-              <li className="footer-icon">
-                <Link to="/" className="footer-a">
-                  <FaLinkedinIn />
+              <li className="footer-li">
+                <Link to="/" className="footer-contact">
+                  <FaLinkedinIn className="footer-icon" />
+                  <p className="footer-text">LinkedIn</p>
                 </Link>
               </li>
-              <li className="footer-icon">
-                <Link to="/" className="footer-a">
-                  <FaTwitter />
+              <li className="footer-li">
+                <Link to="/" className="footer-contact">
+                  <FaTwitter className="footer-icon" />
+                  <p className="footer-text">Twitter</p>
                 </Link>
               </li>
             </ul>

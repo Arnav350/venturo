@@ -54,14 +54,18 @@ function Nav() {
           </Link>
         </li>
       </ul>
-      {user != {} ? (
-        <button className="nav-sign blue-button" onClick={() => openSign("in")}>
+      {Object.keys(user) == 0 ? (
+        <button
+          className="nav-signin blue-button"
+          onClick={() => openSign("in")}
+        >
           Sign In
         </button>
       ) : (
-        <button onClick={logout}>{userEmail}</button>
+        <button className="nav-signout blue-button" onClick={logout}>
+          {user.email.toUpperCase()[0]}
+        </button>
       )}
-      <button onClick={logout}>{userEmail}</button>
     </nav>
   );
 }
