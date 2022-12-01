@@ -14,7 +14,6 @@ import "react-loading-skeleton/dist/skeleton.css";
 function Nav() {
   const [loading, setLoading] = useState(true);
   const { user, setUser } = useContext(Context);
-  const { userEmail, setEmail } = useContext(Context);
 
   useEffect(() => {
     onAuthStateChanged(auth, () => {
@@ -26,7 +25,6 @@ function Nav() {
     event.preventDefault();
     signOut(auth);
     setUser({});
-    setEmail("");
   }
 
   function consoleUser() {

@@ -89,3 +89,7 @@ button {
   border: #444444 solid;
   color: #f8f8f8;
 }
+
+.no-button:hover {
+  cursor: not-allowed;
+}

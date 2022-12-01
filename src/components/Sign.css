@@ -173,10 +173,6 @@
   margin: 36px 0px;
 }
 
-.signup-button:hover {
-  cursor: not-allowed;
-}
-
 .signin-remember {
   color: #38d9c2;
   text-align: center;

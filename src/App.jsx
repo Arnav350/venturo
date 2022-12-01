@@ -16,15 +16,12 @@ import Elementary from "./pages/Elementary";
 
 function App() {
   const [user, setUser] = useState({});
-  const [userEmail, setEmail] = useState("");
 
   return (
     <Context.Provider
       value={{
         user,
         setUser,
-        userEmail,
-        setEmail,
       }}
     >
       <Router>

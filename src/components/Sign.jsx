@@ -62,21 +62,19 @@ function Sign() {
 
   const { user, setUser } = useContext(Context);
   const [loading, setLoading] = useState(true);
-  const { userEmail, setEmail } = useContext(Context);
 
   function signUpButton() {
     const button = document.querySelector(".signup-button");
     const email = document.querySelector(".signup-email").value;
     const pw = document.querySelector(".signup-password").value;
     const pwc = document.querySelector(".signup-confirm").value;
-    button.className = "signup-button gray-button";
+    button.className = "signup-button gray-button no-button";
     button.disabled = true;
     if (email !== "") {
       if (pw.length >= 6 && pw.length <= 15) {
         if (pw === pwc) {
           button.className = "signup-button blue-button";
           button.disabled = false;
-          setEmail(document.querySelector(".signup-email").value);
         }
       }
     }
@@ -95,7 +93,8 @@ function Sign() {
     event.preventDefault();
     const verify = document.querySelector(".signup-verify").style;
     const pw = document.querySelector(".signup-password").value;
-    createUserWithEmailAndPassword(auth, userEmail, pw)
+    const email = document.querySelector(".signup-email").value;
+    createUserWithEmailAndPassword(auth, email, pw)
       .then((user) => {
         console.log(user);
         verify.zIndex = 2;
@@ -111,7 +110,8 @@ function Sign() {
 
   async function forgotPassword(event) {
     event.preventDefault();
-    await sendPasswordResetEmail(auth, userEmail)
+    const email = document.querySelector(".signin-email").value;
+    await sendPasswordResetEmail(auth, email)
       .then(() => {
         alert("YAY!");
       })
@@ -128,7 +128,6 @@ function Sign() {
       .then(({ user }) => {
         console.log(user);
         setUser(user);
-        setEmail(email);
       })
       .catch((error) => {
         console.log(error.message);
@@ -228,7 +227,7 @@ function Sign() {
           <input
             type="submit"
             value="Sign Up"
-            className="signup-button gray-button"
+            className="signup-button gray-button no-button"
             disabled
           />
         </form>
@@ -245,7 +244,9 @@ function Sign() {
           </Link>
         </p>
         <div className="signup-verify">
-          <h3 className="signup-sent">An email has been sent to {userEmail}</h3>
+          <h3 className="signup-sent">
+            An email has been sent to {user.email}
+          </h3>
           <button className="signup-resend blue-button">Resend</button>
         </div>
       </div>
