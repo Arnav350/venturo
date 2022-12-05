@@ -17,9 +17,17 @@ import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
 
 function Sign() {
   const [type, setType] = useState("password");
+  const { user, setUser } = useContext(Context);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    onAuthStateChanged(auth, (user) => {
+      setLoading(false);
+      if (user) {
+        setUser(user);
+      }
+    });
   }, []);
 
   function showPass() {
@@ -60,9 +68,6 @@ function Sign() {
     }
   }
 
-  const { user, setUser } = useContext(Context);
-  const [loading, setLoading] = useState(true);
-
   function signUpButton() {
     const button = document.querySelector(".signup-button");
     const email = document.querySelector(".signup-email").value;
@@ -79,15 +84,6 @@ function Sign() {
       }
     }
   }
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      setLoading(false);
-      if (user) {
-        setUser(user);
-      }
-    });
-  }, []);
 
   function signUp(event) {
     event.preventDefault();
@@ -140,10 +136,16 @@ function Sign() {
     setUser({});
   }
 
+  function consoleType() {
+    const test = document.querySelector(".signin-password").type;
+    console.log(test);
+  }
+
   return (
     <>
       <div className="signin-card">
         <div className="signin-top">
+          <button onClick={consoleType}>TYPE</button>
           <h1 className="signin-title">Sign In</h1>
           <FaTimes className="signin-exit" onClick={() => closeSign("in")} />
         </div>
