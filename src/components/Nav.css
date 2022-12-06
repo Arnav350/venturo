@@ -22,15 +22,11 @@
   max-width: 80px;
 }
 
-.nav-name {
-  max-width: 200px;
-}
-
 .nav-img {
   width: 100%;
 }
 
-.nav-name {
+.nav-venturo {
   width: 100%;
   max-width: 200px;
 }
@@ -57,7 +53,7 @@
   transition: background-color 200ms ease, border 200ms ease;
 }
 
-.nav-signout {
+.nav-profile {
   color: #ffffff;
   background-color: #38d9c2;
   border: #38d9c2 solid;

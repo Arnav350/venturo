@@ -37,7 +37,7 @@ function Nav() {
         <figure className="nav-logo">
           <img src={Logo} alt="Logo" className="nav-img" />
         </figure>
-        <figure className="nav-name">
+        <figure className="nav-venturo">
           <img src={Name} alt="Name" className="nav-img" />
         </figure>
       </Link>
@@ -65,7 +65,7 @@ function Nav() {
       </ul>
       {loading ? (
         <Skeleton height={64} width={100} />
-      ) : Object.keys(user) == 0 ? (
+      ) : Object.keys(user) === 0 ? (
         <button
           className="nav-signin blue-button"
           onClick={() => openSign("in")}
@@ -73,9 +73,20 @@ function Nav() {
           Sign In
         </button>
       ) : (
-        <button className="nav-signout blue-button" onClick={logout}>
-          {user.email.toUpperCase()[0]}
-        </button>
+        <div>
+          <button className="nav-profile blue-button" onClick={logout}>
+            {user.email.toUpperCase()[0]}
+          </button>
+          <div className="nav-dropdown">
+            <div className="nav-personal">
+              <div className="nav-pfp">{user.email.toUpperCase()[0]}</div>
+              <div className="nav-name">FIRST LAST</div>
+            </div>
+            <div className="nav-email">{user.email}</div>
+            <div className="nav-manage">Manage your account</div>
+            <div className="nav-signout">Sign Out</div>
+          </div>
+        </div>
       )}
       <button onClick={consoleUser}>USER</button>
     </nav>
