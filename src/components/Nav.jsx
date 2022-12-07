@@ -73,7 +73,7 @@ function Nav() {
           Sign In
         </button>
       ) : (
-        <div>
+        <div className="nav-info">
           <button className="nav-profile blue-button" onClick={logout}>
             {user.email.toUpperCase()[0]}
           </button>
@@ -88,7 +88,7 @@ function Nav() {
           </div>
         </div>
       )}
-      <button onClick={consoleUser}>USER</button>
+      {/* <button onClick={consoleUser}>USER</button> */}
     </nav>
   );
 }
