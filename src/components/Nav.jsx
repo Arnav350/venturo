@@ -21,6 +21,12 @@ function Nav() {
     });
   }, []);
 
+  function dropdown() {
+    const drop = document.querySelector(".nav-dropdown").style;
+    drop.opacity = 1;
+    // console.log("hello");
+  }
+
   function logout(event) {
     event.preventDefault();
     signOut(auth);
@@ -74,17 +80,21 @@ function Nav() {
         </button>
       ) : (
         <div className="nav-info">
-          <button className="nav-profile blue-button" onClick={logout}>
-            {user.email.toUpperCase()[0]}
+          <button className="nav-profile blue-button" onClick={dropdown}>
+            {/* {user.email.toUpperCase()[0]} */}
           </button>
           <div className="nav-dropdown">
             <div className="nav-personal">
-              <div className="nav-pfp">{user.email.toUpperCase()[0]}</div>
+              <div className="nav-pfp">
+                {/* {user.email.toUpperCase()[0]} */}
+              </div>
               <div className="nav-name">FIRST LAST</div>
             </div>
-            <div className="nav-email">{user.email}</div>
-            <div className="nav-manage">Manage your account</div>
-            <div className="nav-signout">Sign Out</div>
+            <div className="nav-email">{/* {user.email} */}</div>
+            <div className="nav-manage">Manage Account</div>
+            <button className="nav-signout blue-button" onClick={logout}>
+              Sign Out
+            </button>
           </div>
         </div>
       )}

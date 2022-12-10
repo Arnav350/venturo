@@ -82,7 +82,6 @@
 }
 
 .nav-profile {
-  top: 50%;
   color: #ffffff;
   background-color: #38d9c2;
   border: #38d9c2 solid;
@@ -94,6 +93,49 @@
 }
 
 .nav-dropdown {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 80px;
+  right: 0px;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-personal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 8px;
+}
+
+.nav-pfp {
+  background-color: #38d9c2;
+  border: #38d9c2 solid;
+  color: #f8f8f8;
+  text-align: center;
+  margin-right: 12px;
+  height: 64px;
+  width: 64px;
+  font-size: 32px;
+  border-radius: 50%;
+}
+
+.nav-email,
+.nav-manage {
+  font-weight: 300;
+  padding: 8px 0px;
+}
+
+.nav-signout {
+  color: #ffffff;
+  background-color: #38d9c2;
+  border: #38d9c2 solid;
+  margin-top: 8px;
+  padding: 4px 20px;
+  border-radius: 20px;
+  transition: all 300ms ease;
 }
