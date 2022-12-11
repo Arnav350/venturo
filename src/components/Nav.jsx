@@ -23,8 +23,11 @@ function Nav() {
 
   function dropdown() {
     const drop = document.querySelector(".nav-dropdown").style;
-    drop.opacity = 1;
-    // console.log("hello");
+    if (drop.opacity == 0) {
+      drop.opacity = 1;
+    } else {
+      drop.opacity = 0;
+    }
   }
 
   function logout(event) {

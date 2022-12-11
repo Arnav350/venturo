@@ -145,7 +145,7 @@ function Sign() {
     <>
       <div className="signin-card">
         <div className="signin-top">
-          <button onClick={consoleType}>TYPE</button>
+          {/* <button onClick={consoleType}>TYPE</button> */}
           <h1 className="signin-title">Sign In</h1>
           <FaTimes className="signin-exit" onClick={() => closeSign("in")} />
         </div>
