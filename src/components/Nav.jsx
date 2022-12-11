@@ -71,7 +71,7 @@ function Nav() {
       </ul>
       {loading ? (
         <Skeleton height={64} width={100} />
-      ) : Object.keys(user) === 0 ? (
+      ) : Object.keys(user).length === 0 ? (
         <button
           className="nav-signin blue-button"
           onClick={() => openSign("in")}
@@ -81,16 +81,14 @@ function Nav() {
       ) : (
         <div className="nav-info">
           <button className="nav-profile blue-button" onClick={dropdown}>
-            {/* {user.email.toUpperCase()[0]} */}
+            {user.email.toUpperCase()[0]}
           </button>
           <div className="nav-dropdown">
             <div className="nav-personal">
-              <div className="nav-pfp">
-                {/* {user.email.toUpperCase()[0]} */}
-              </div>
+              <div className="nav-pfp">{user.email.toUpperCase()[0]}</div>
               <div className="nav-name">FIRST LAST</div>
             </div>
-            <div className="nav-email">{/* {user.email} */}</div>
+            <div className="nav-email">{user.email}</div>
             <div className="nav-manage">Manage Account</div>
             <button className="nav-signout blue-button" onClick={logout}>
               Sign Out
