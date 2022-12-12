@@ -7,7 +7,7 @@ function CheckSign() {
   const { user, setUser } = useContext(Context);
 
   return Object.keys(user).length === 0 ? (
-    <Navigate to="/" state={{ from: location }} replace />
+    <Navigate to="/Home" state={{ from: location }} replace />
   ) : (
     <Outlet />
   );
