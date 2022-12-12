@@ -60,31 +60,31 @@ function Footer() {
             <h3 className="footer-title">CONTACT</h3>
             <ul className="footer-contacts">
               <li className="footer-li">
-                <Link to="/" className="footer-contact">
+                <Link to="/Home" className="footer-contact">
                   <FaEnvelope className="footer-icon" />
                   <p className="footer-text">Email</p>
                 </Link>
               </li>
               <li className="footer-li">
-                <Link to="/" className="footer-contact">
+                <Link to="/Home" className="footer-contact">
                   <FaFacebookF className="footer-icon" />
                   <p className="footer-text">Facebook</p>
                 </Link>
               </li>
               <li className="footer-li">
-                <Link to="/" className="footer-contact">
+                <Link to="/Home" className="footer-contact">
                   <FaInstagram className="footer-icon" />
                   <p className="footer-text">Instagram</p>
                 </Link>
               </li>
               <li className="footer-li">
-                <Link to="/" className="footer-contact">
+                <Link to="/Home" className="footer-contact">
                   <FaLinkedinIn className="footer-icon" />
                   <p className="footer-text">LinkedIn</p>
                 </Link>
               </li>
               <li className="footer-li">
-                <Link to="/" className="footer-contact">
+                <Link to="/Home" className="footer-contact">
                   <FaTwitter className="footer-icon" />
                   <p className="footer-text">Twitter</p>
                 </Link>
@@ -99,12 +99,12 @@ function Footer() {
             </p>
           </li>
           <li className="footer-li">
-            <Link to="/" className="footer-a">
+            <Link to="/Home" className="footer-a">
               Terms
             </Link>
           </li>
           <li className="footer-li">
-            <Link to="/" className="footer-a">
+            <Link to="/Home" className="footer-a">
               Privacy
             </Link>
           </li>

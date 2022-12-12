@@ -13,6 +13,8 @@ import Review from "./pages/Review.jsx";
 import Schedule from "./pages/Schedule.jsx";
 //test
 import Elementary from "./pages/Elementary";
+import Missing from "./pages/Missing";
+import CheckSign from "./components/CheckSign";
 
 function App() {
   const [user, setUser] = useState({});
@@ -27,15 +29,21 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/" element={<Main />} />
+          {/* Public */}
+          <Route path="/Home" element={<Main />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Account" element={<Account />} />
           <Route path="/Donate" element={<Donate />} />
           <Route path="/Faq" element={<Faq />} />
           <Route path="/Plan" element={<Plan />} />
           <Route path="/Review" element={<Review />} />
-          <Route path="/Schedule" element={<Schedule />} />
-          <Route path="/Elementary" element={<Elementary />} />
+          <Route path="*" element={<Missing />} />
+
+          {/* Private */}
+          <Route element={<CheckSign />}>
+            <Route path="/Account" element={<Account />} />
+            <Route path="/Elementary" element={<Elementary />} />
+            <Route path="/Schedule" element={<Schedule />} />
+          </Route>
         </Routes>
         <Footer />
       </Router>

@@ -7,8 +7,7 @@ import { Context } from "../App.jsx";
 
 function Account() {
   const [type, setType] = useState("password");
-  const { userEmail, setEmail } = useContext(Context);
-  const { userPass, setPass } = useContext(Context);
+  const { user, setUser } = useContext(Context);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,7 +47,7 @@ function Account() {
                 <input
                   type="text"
                   className="account-email"
-                  value={userEmail}
+                  value={user.email}
                   readOnly
                 />
               </label>
@@ -60,7 +59,7 @@ function Account() {
                 <input
                   type="password"
                   className="account-password"
-                  value={userPass}
+                  value={user.password}
                   readOnly
                 />
                 {type === "password" ? (

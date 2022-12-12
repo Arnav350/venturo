@@ -23,7 +23,7 @@ function Nav() {
 
   function dropdown() {
     const drop = document.querySelector(".nav-dropdown").style;
-    if (drop.opacity == 0) {
+    if (drop.opacity === 0) {
       drop.opacity = 1;
     } else {
       drop.opacity = 0;
@@ -42,7 +42,7 @@ function Nav() {
 
   return (
     <nav className="nav-bar">
-      <Link to="/" className="nav-title">
+      <Link to="/Home" className="nav-title">
         <figure className="nav-logo">
           <img src={Logo} alt="Logo" className="nav-img" />
         </figure>
@@ -92,7 +92,9 @@ function Nav() {
               <div className="nav-name">FIRST LAST</div>
             </div>
             <div className="nav-email">{user.email}</div>
-            <div className="nav-manage">Manage Account</div>
+            <Link to="/Account" className="nav-manage">
+              Manage Account
+            </Link>
             <button className="nav-signout blue-button" onClick={logout}>
               Sign Out
             </button>
