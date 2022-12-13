@@ -77,8 +77,9 @@
 
 .nav-info {
   position: relative;
-  max-height: 64px;
-  width: 64px;
+  text-align: center;
+  max-height: 100px;
+  width: 100px;
 }
 
 .nav-profile {
