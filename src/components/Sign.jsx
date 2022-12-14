@@ -109,10 +109,10 @@ function Sign() {
     const email = document.querySelector(".signin-email").value;
     await sendPasswordResetEmail(auth, email)
       .then(() => {
-        alert("YAY!");
+        console.log(user);
       })
       .catch((error) => {
-        alert("FUCK!");
+        console.log(error);
       });
   }
 
