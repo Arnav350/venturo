@@ -101,7 +101,6 @@ function Nav() {
           </div>
         </div>
       )}
-      {/* <button onClick={consoleUser}>USER</button> */}
     </nav>
   );
 }
