@@ -116,7 +116,7 @@ function Sign() {
       });
   }
 
-  function signIn(event) {
+  function login(event) {
     event.preventDefault();
     const email = document.querySelector(".signin-email").value;
     const pw = document.querySelector(".signin-password").value;
@@ -148,7 +148,7 @@ function Sign() {
           <h1 className="signin-title">Sign In</h1>
           <FaTimes className="signin-exit" onClick={() => closeSign("in")} />
         </div>
-        <form className="signin-form" onSubmit={signIn}>
+        <form className="signin-form" onSubmit={login}>
           <label className="signin-label">Email</label>
           <input type="email" className="signin-email" required="required" />
           <label className="signin-label">Password</label>
