@@ -89,7 +89,7 @@ function Nav() {
           <div className="nav-dropdown">
             <div className="nav-personal">
               <div className="nav-pfp">{user.email.toUpperCase()[0]}</div>
-              <div className="nav-name">FIRST LAST</div>
+              <div className="nav-name">FIRST NAME LAST NAME</div>
             </div>
             <div className="nav-email">{user.email}</div>
             <Link to="/Account" className="nav-manage">
