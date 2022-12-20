@@ -6,7 +6,7 @@ import { auth } from "./init.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
+  // signOut,
   onAuthStateChanged,
   sendEmailVerification,
   sendPasswordResetEmail,
@@ -18,12 +18,12 @@ import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
 function Sign() {
   const [type, setType] = useState("password");
   const { user, setUser } = useContext(Context);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     onAuthStateChanged(auth, (user) => {
-      setLoading(false);
+      // setLoading(false);
       if (user) {
         setUser(user);
       }
@@ -130,16 +130,11 @@ function Sign() {
       });
   }
 
-  function logout(event) {
-    event.preventDefault();
-    signOut(auth);
-    setUser({});
-  }
-
-  function consoleType() {
-    const test = document.querySelector(".signin-password").type;
-    console.log(test);
-  }
+  // function logout(event) {
+  //   event.preventDefault();
+  //   signOut(auth);
+  //   setUser({});
+  // }
 
   return (
     <>

@@ -36,10 +36,6 @@ function Nav() {
     setUser({});
   }
 
-  function consoleUser() {
-    console.log(user);
-  }
-
   return (
     <nav className="nav-bar">
       <Link to="/Home" className="nav-title">
