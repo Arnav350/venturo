@@ -85,7 +85,7 @@ function Sign() {
     }
   }
 
-  function signUp(event) {
+  function register(event) {
     event.preventDefault();
     const verify = document.querySelector(".signup-verify").style;
     const pw = document.querySelector(".signup-password").value;
@@ -193,7 +193,7 @@ function Sign() {
           <h1 className="signup-title">Sign Up</h1>
           <FaTimes className="signup-exit" onClick={() => closeSign("up")} />
         </div>
-        <form className="signup-form" onSubmit={signUp}>
+        <form className="signup-form" onSubmit={register}>
           <label className="signup-label">Email</label>
           <input
             type="email"
