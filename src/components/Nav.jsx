@@ -23,7 +23,7 @@ function Nav() {
 
   function dropdown() {
     const drop = document.querySelector(".nav-dropdown").style;
-    if (drop.opacity == 0) {
+    if (drop.opacity === "0") {
       drop.opacity = 1;
     } else {
       drop.opacity = 0;
