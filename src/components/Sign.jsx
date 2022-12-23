@@ -130,12 +130,6 @@ function Sign() {
       });
   }
 
-  // function logout(event) {
-  //   event.preventDefault();
-  //   signOut(auth);
-  //   setUser({});
-  // }
-
   return (
     <>
       <div className="signin-card">
