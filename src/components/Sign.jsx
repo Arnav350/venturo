@@ -18,12 +18,10 @@ import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
 function Sign() {
   const [type, setType] = useState("password");
   const { user, setUser } = useContext(Context);
-  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     onAuthStateChanged(auth, (user) => {
-      // setLoading(false);
       if (user) {
         setUser(user);
       }
