@@ -6,7 +6,6 @@ import { auth } from "./init.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  // signOut,
   onAuthStateChanged,
   sendEmailVerification,
   sendPasswordResetEmail,
