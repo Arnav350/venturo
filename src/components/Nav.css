@@ -14,12 +14,11 @@
 
 .nav-title {
   display: flex;
-  max-width: 280px;
-  width: 100%;
+  width: 280px;
 }
 
 .nav-logo {
-  max-width: 80px;
+  width: 80px;
 }
 
 .nav-img {
@@ -27,8 +26,7 @@
 }
 
 .nav-venturo {
-  width: 100%;
-  max-width: 200px;
+  width: 200px;
 }
 
 .nav-ul {
@@ -154,4 +152,10 @@
   .nav-title {
     width: 80px;
   }
+
+  .nav-li:nth-child(3) {
+    display: none;
+  }
 }
+
+@media (max-width: 480px) {}
