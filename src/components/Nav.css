@@ -145,3 +145,13 @@
   border-radius: 20px;
   transition: all 300ms ease;
 }
+
+@media (max-width: 786px) {
+  .nav-venturo {
+    display: none;
+  }
+
+  .nav-title {
+    width: 80px;
+  }
+}
