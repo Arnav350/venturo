@@ -97,6 +97,7 @@ function Nav() {
           </div>
         </div>
       )}
+      <div className="nav-burger"></div>
     </nav>
   );
 }
