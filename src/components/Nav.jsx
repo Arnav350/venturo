@@ -13,6 +13,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 function Nav() {
   const [loading, setLoading] = useState(true);
+  const [burger, setBurger] = useState(true);
   const { user, setUser } = useContext(Context);
 
   useEffect(() => {
@@ -34,6 +35,18 @@ function Nav() {
     event.preventDefault();
     signOut(auth);
     setUser({});
+  }
+
+  function menu() {
+    const navMenu = document.querySelector(".nav-menu");
+    if (burger) {
+      setBurger(false);
+      navMenu.classList.add("open");
+      console.log("hi");
+    } else {
+      setBurger(true);
+      navMenu.classList.remove("open");
+    }
   }
 
   return (
@@ -97,7 +110,9 @@ function Nav() {
           </div>
         </div>
       )}
-      <div className="nav-burger"></div>
+      <button className="nav-menu" onClick={menu}>
+        <div className="nav-burger"></div>
+      </button>
     </nav>
   );
 }
