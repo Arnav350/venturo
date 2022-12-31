@@ -38,14 +38,14 @@ function Nav() {
   }
 
   function menu() {
-    const navMenu = document.querySelector(".nav-menu");
+    const navLines = document.querySelector(".nav-lines");
     if (burger) {
       setBurger(false);
-      navMenu.classList.add("open");
+      navLines.classList.add("open");
       console.log("hi");
     } else {
       setBurger(true);
-      navMenu.classList.remove("open");
+      navLines.classList.remove("open");
     }
   }
 
@@ -110,9 +110,20 @@ function Nav() {
           </div>
         </div>
       )}
-      <button className="nav-menu" onClick={menu}>
+      <button className="nav-lines" onClick={menu}>
         <div className="nav-burger"></div>
       </button>
+      <div className="nav-menu">
+        <Link to="/Donate" className="nav-_____">
+          Donate
+        </Link>
+        <Link to="/About" className="nav-_____">
+          About
+        </Link>
+        <button className="nav-_____  " onClick={() => openSign("in")}>
+          Sign In
+        </button>
+      </div>
     </nav>
   );
 }

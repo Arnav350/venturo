@@ -144,6 +144,16 @@
   transition: all 300ms ease;
 }
 
+.nav-menu {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 @media (max-width: 786px) {
   .nav-ul {
     display: none;
@@ -157,7 +167,7 @@
     display: none;
   }
 
-  .nav-menu {
+  .nav-lines {
     display: flex;
     align-items: center;
     justify-content: center;
