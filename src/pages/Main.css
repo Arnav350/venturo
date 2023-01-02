@@ -12,6 +12,7 @@
   flex-direction: column;
   width: 500px;
   padding-right: 50px;
+  padding-bottom: 32px;
 }
 
 .info-title {
@@ -25,6 +26,12 @@
   padding-bottom: 30px;
 }
 
+.info-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .info-learn {
   color: #ffffff;
   background-color: #38d9c2;
@@ -32,7 +39,6 @@
   padding: 8px 20px;
   border-radius: 20px;
   font-size: 20px;
-  margin-right: 10px;
   transition: all 300ms ease;
 }
 
@@ -146,4 +152,26 @@
 
 .steps-more:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 786px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-text {
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  .info-links {
+    flex-direction: column;
+    height: 120px;
+  }
+
+  .info-learn,
+  .info-vol {
+    width: 100%;
+  }
 }

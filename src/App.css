@@ -45,7 +45,7 @@ main,
   width: 100%;
   max-width: 1000px;
   margin: 0px auto;
-  padding: 40px 12px;
+  padding: 40px 16px;
 }
 
 section:nth-child(even) {

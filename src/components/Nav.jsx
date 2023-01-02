@@ -42,7 +42,6 @@ function Nav() {
     if (burger) {
       setBurger(false);
       navLines.classList.add("open");
-      console.log("hi");
     } else {
       setBurger(true);
       navLines.classList.remove("open");
