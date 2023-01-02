@@ -99,6 +99,39 @@ function Main() {
             </div>
           </div>
         </section>
+        <section>
+          <div className="help container">
+            <h1 className="help-title">Want to Help?</h1>
+            <div className="help-vol">
+              <div className="help-text">
+                <h3 className="help-sub">Volunteer</h3>
+                <p className="help-para">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas soluta, excepturi est laborum minus nihil,
+                  consectetur placeat quae, culpa deleniti repudiandae vitae aut
+                  eaque! Ratione dolorem sit placeat atque suscipit!
+                </p>
+              </div>
+              <figure className="help-fig">
+                <img src={Math} alt="math" className="help-img" />
+              </figure>
+            </div>
+            <div className="help-don">
+              <figure className="help-fig">
+                <img src={Steps} alt="math" className="help-img" />
+              </figure>
+              <div className="help-text">
+                <h3 className="help-sub">Donate</h3>
+                <p className="help-para">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  qui odit sapiente ducimus nesciunt. Laborum voluptatem quos
+                  atque delectus asperiores? Maiores excepturi nemo mollitia
+                  numquam eum inventore asperiores dolor? Libero.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Sign />
     </>

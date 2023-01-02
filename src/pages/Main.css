@@ -108,30 +108,6 @@
   text-decoration: underline;
 }
 
-
-
-@keyframes steps {
-  0% {
-    left: 0%;
-    width: 100%;
-  }
-
-  50% {
-    left: 100%;
-    width: 0%;
-  }
-
-  51% {
-    left: 0%;
-    width: 0%;
-  }
-
-  100% {
-    left: 0%;
-    width: 100%;
-  }
-}
-
 .steps-start {
   color: #ffffff;
   background-color: #38d9c2;
@@ -153,6 +129,10 @@
 .steps-more:hover {
   text-decoration: underline;
 }
+
+/* help */
+
+
 
 @media (max-width: 786px) {
   .info {
