@@ -80,7 +80,7 @@
 }
 
 .steps-fig {
-  padding: 16px 24px;
+  padding: 16px;
   max-height: 360px;
   height: 100%;
 }
@@ -99,6 +99,7 @@
 
 .steps-steps {
   height: 360px;
+  padding: 16px;
 }
 
 .steps-step {
@@ -128,7 +129,7 @@
 .steps-more {
   color: #000000;
   text-align: center;
-  padding: 8px 0px;
+  padding: 16px 0px;
   font-size: 14px;
 }
 
