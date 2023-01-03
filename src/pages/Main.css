@@ -63,9 +63,15 @@
 
 /* steps */
 
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .steps-title {
   font-size: 44px;
-  text-align: center;
   margin-bottom: 60px;
 }
 
@@ -132,7 +138,53 @@
 
 /* help */
 
+.help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.help-title {
+  font-size: 44px;
+  padding-bottom: 60px;
+}
+
+.help-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0px;
+}
+
+.help-fig {
+  width: 400px;
+  padding: 16px;
+}
+
+.help-img {
+  width: 100%;
+}
+
+.help-vol,
+.help-don {
+  width: 60%;
+  padding: 16px;
+}
+
+.help-don {
+  text-align: right;
+}
+
+.help-sub {
+  font-size: 32px;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+
+.help-para {
+  font-size: 18px;
+}
 
 @media (max-width: 786px) {
   .info {

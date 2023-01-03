@@ -102,8 +102,8 @@ function Main() {
         <section>
           <div className="help container">
             <h1 className="help-title">Want to Help?</h1>
-            <div className="help-vol">
-              <div className="help-text">
+            <div className="help-box">
+              <div className="help-vol">
                 <h3 className="help-sub">Volunteer</h3>
                 <p className="help-para">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -116,11 +116,11 @@ function Main() {
                 <img src={Math} alt="math" className="help-img" />
               </figure>
             </div>
-            <div className="help-don">
+            <div className="help-box">
               <figure className="help-fig">
                 <img src={Steps} alt="math" className="help-img" />
               </figure>
-              <div className="help-text">
+              <div className="help-don">
                 <h3 className="help-sub">Donate</h3>
                 <p className="help-para">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
