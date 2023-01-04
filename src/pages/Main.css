@@ -10,26 +10,26 @@
 .info-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 500px;
-  padding-right: 50px;
-  padding-bottom: 32px;
+  padding: 16px;
 }
 
 .info-title {
-  padding-top: 50px;
   font-size: 44px;
+  padding: 16px 0px;
 }
 
 .info-para {
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding: 16px 0px;
 }
 
 .info-links {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 8px 0px;
 }
 
 .info-learn {
@@ -53,8 +53,8 @@
 }
 
 .info-fig {
-  max-width: 500px;
-  width: 100%;
+  width: 500px;
+  padding: 16px;
 }
 
 .info-pic {
