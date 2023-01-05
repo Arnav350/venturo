@@ -82,8 +82,8 @@
 }
 
 .steps-fig {
+  max-width: 500px;
   padding: 16px;
-  height: 360px;
 }
 
 .steps-pic {
@@ -194,7 +194,6 @@
 
   .info-text {
     width: 100%;
-    padding-right: 0px;
   }
 
   .info-links {
@@ -205,5 +204,9 @@
   .info-learn,
   .info-vol {
     width: 100%;
+  }
+
+  .steps-box {
+    flex-direction: column;
   }
 }
