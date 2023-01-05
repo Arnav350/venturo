@@ -72,17 +72,18 @@
 
 .steps-title {
   font-size: 44px;
-  margin-bottom: 60px;
+  padding-bottom: 32px;
 }
 
 .steps-box {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .steps-fig {
   padding: 16px;
-  max-height: 360px;
-  height: 100%;
+  height: 360px;
 }
 
 .steps-pic {
@@ -94,18 +95,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 440px;
+  padding: 16px;
 }
 
 .steps-steps {
-  height: 360px;
-  padding: 16px;
+  padding: 16px 0px;
 }
 
 .steps-step {
   font-size: 18px;
   padding: 16px 0px;
-  width: 100%;
 }
 
 .steps-link {
