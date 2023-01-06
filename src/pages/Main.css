@@ -147,10 +147,11 @@
 
 .help-title {
   font-size: 44px;
-  padding-bottom: 60px;
+  padding-bottom: 32px;
 }
 
-.help-box {
+.help-volunteer,
+.help-donate {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,7 +207,21 @@
     width: 100%;
   }
 
-  .steps-box {
+  .steps-box,
+  .help-donate {
+    flex-direction: column-reverse;
+  }
+
+  .help-volunteer {
     flex-direction: column;
+  }
+
+  .help-vol,
+  .help-don {
+    width: 100%;
+  }
+
+  .help-don {
+    text-align: left;
   }
 }

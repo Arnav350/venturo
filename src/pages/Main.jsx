@@ -102,7 +102,7 @@ function Main() {
         <section>
           <div className="help container">
             <h1 className="help-title">Want to Help?</h1>
-            <div className="help-box">
+            <div className="help-volunteer">
               <div className="help-vol">
                 <h3 className="help-sub">Volunteer</h3>
                 <p className="help-para">
@@ -116,7 +116,7 @@ function Main() {
                 <img src={Math} alt="math" className="help-img" />
               </figure>
             </div>
-            <div className="help-box">
+            <div className="help-donate">
               <figure className="help-fig">
                 <img src={Steps} alt="math" className="help-img" />
               </figure>
