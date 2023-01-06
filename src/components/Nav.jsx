@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import Name from "../assets/venturo.png";
 import { auth } from "./init.js";
-import { openSign } from "../components/Utils.js";
+import { openSign } from "./Utils.js";
 import { Context } from "../App.jsx";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import Skeleton from "react-loading-skeleton";
