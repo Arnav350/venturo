@@ -1,0 +1,52 @@
+.missing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
+  height: 80vh;
+}
+
+.missing-title {
+  font-size: 96px;
+  padding: 8px 0px;
+}
+
+.missing-sub {
+  font-size: 32px;
+  font-weight: 400;
+  padding: 8px 0px;
+}
+
+.missing-para {
+  font-size: 18px;
+  width: 600px;
+  padding: 8px 0px;
+  text-align: center;
+}
+
+.missing-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 400px;
+  padding: 8px 0px;
+}
+
+.missing-home {
+  color: #ffffff;
+  background-color: #38d9c2;
+  border: #38d9c2 solid;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: all 300ms ease;
+}
+
+.missing-prev {
+  color: #38d9c2;
+  background-color: #ffffff;
+  border: #d7d8de solid;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: all 300ms ease;
+}
