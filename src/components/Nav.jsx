@@ -38,7 +38,7 @@ function Nav() {
   }
 
   function menu() {
-    const navLines = document.querySelector(".nav-lines");
+    const navLines = document.querySelector(".burger__box");
     if (burger) {
       setBurger(false);
       navLines.classList.add("open");
@@ -50,32 +50,32 @@ function Nav() {
 
   return (
     <nav className="nav-bar">
-      <Link to="/Home" className="nav-title">
-        <figure className="nav-logo">
-          <img src={Logo} alt="Logo" className="nav-img" />
+      <Link to="/Home" className="nav__title">
+        <figure className="nav__title__logo">
+          <img src={Logo} alt="Logo" />
         </figure>
-        <figure className="nav-venturo">
-          <img src={Name} alt="Name" className="nav-img" />
+        <figure className="nav__title__name">
+          <img src={Name} alt="Venturo" />
         </figure>
       </Link>
-      <ul className="nav-ul">
-        <li className="nav-li">
-          <button className="nav-header" onClick={() => openSign("up")}>
+      <ul className="nav__links">
+        <li>
+          <button className="nav__links__link" onClick={() => openSign("up")}>
             Start Learning
           </button>
         </li>
-        <li className="nav-li">
-          <button className="nav-header" onClick={() => openSign("up")}>
+        <li>
+          <button className="nav__links__link" onClick={() => openSign("up")}>
             Volunteer
           </button>
         </li>
-        <li className="nav-li">
-          <Link to="/Donate" className="nav-header">
+        <li>
+          <Link to="/Donate" className="nav__links__link">
             Donate
           </Link>
         </li>
-        <li className="nav-li">
-          <Link to="/About" className="nav-header">
+        <li>
+          <Link to="/About" className="nav__links__link">
             About
           </Link>
         </li>
@@ -84,42 +84,50 @@ function Nav() {
         <Skeleton height={64} width={100} />
       ) : Object.keys(user).length === 0 ? (
         <button
-          className="nav-signin blue-button"
+          className="nav__signin blue-button"
           onClick={() => openSign("in")}
         >
           Sign In
         </button>
       ) : (
-        <div className="nav-info">
-          <button className="nav-profile blue-button" onClick={dropdown}>
+        <div className="nav__info">
+          <button
+            className="nav__info__profile-picture blue-button"
+            onClick={dropdown}
+          >
             {user.email.toUpperCase()[0]}
           </button>
-          <div className="nav-dropdown">
-            <div className="nav-personal">
-              <div className="nav-pfp">{user.email.toUpperCase()[0]}</div>
-              <div className="nav-name">FIRST NAME LAST NAME</div>
+          <div className="nav__info__dropdown">
+            <div className="nav__info__personal">
+              <div className="nav__personal__profile-picture">
+                {user.email.toUpperCase()[0]}
+              </div>
+              <div className="nav__personal__name">FIRST NAME LAST NAME</div>
             </div>
-            <div className="nav-email">{user.email}</div>
-            <Link to="/Account" className="nav-manage">
+            <div className="nav__info__email">{user.email}</div>
+            <Link to="/Account" className="nav__info__manage">
               Manage Account
             </Link>
-            <button className="nav-signout blue-button" onClick={logout}>
+            <button className="nav__info__signout blue-button" onClick={logout}>
               Sign Out
             </button>
           </div>
         </div>
       )}
-      <button className="nav-lines" onClick={menu}>
-        <div className="nav-burger"></div>
+      <button className="nav__burger__box" onClick={menu}>
+        <div className="nav__burger"></div>
       </button>
-      <div className="nav-menu">
-        <Link to="/Donate" className="nav-_____">
+      <div className="nav__burger__menu">
+        <Link to="/Donate" className="nav__burger__menu__donate">
           Donate
         </Link>
-        <Link to="/About" className="nav-_____">
+        <Link to="/About" className="nav__burger__menu__about">
           About
         </Link>
-        <button className="nav-_____  " onClick={() => openSign("in")}>
+        <button
+          className="nav__burger__menu__signin"
+          onClick={() => openSign("in")}
+        >
           Sign In
         </button>
       </div>

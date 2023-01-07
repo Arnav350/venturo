@@ -64,6 +64,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
 button {
   cursor: pointer;
   background-color: transparent;
