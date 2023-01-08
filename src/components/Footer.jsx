@@ -12,99 +12,99 @@ import {
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer-bar">
       <div className="container">
-        <div className="footer-bar">
-          <div className="footer-list">
-            <h3 className="footer-title">LEARN MORE</h3>
-            <ul className="footer-learn">
-              <li className="footer-li">
-                <button className="footer-a">Enroll a Student</button>
+        <div className="footer__nav ">
+          <div className="footer__links">
+            <h3 className="links__title">LEARN MORE</h3>
+            <ul>
+              <li className="footer__list-item">
+                <button className="footer__link">Enroll a Student</button>
               </li>
-              <li className="footer-li">
-                <button className="footer-a">Become a Tutor</button>
+              <li className="footer__list-item">
+                <button className="footer__link">Become a Tutor</button>
               </li>
-              <li className="footer-li">
-                <Link to="/Donate" className="footer-a">
+              <li className="footer__list-item">
+                <Link to="/Donate" className="footer__link">
                   Donate
                 </Link>
               </li>
-              <li>
-                <Link to="/Plan" className="footer-a">
+              <li className="footer__list-item">
+                <Link to="/Plan" className="footer__link">
                   Plans
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="footer-list">
-            <h3 className="footer-title">ABOUT US</h3>
-            <ul className="footer-about">
-              <li className="footer-li">
-                <Link to="/About" className="footer-a">
+          <div className="footer__links">
+            <h3 className="links__title">ABOUT US</h3>
+            <ul>
+              <li className="footer__list-item">
+                <Link to="/About" className="footer__link">
                   Mission
                 </Link>
               </li>
-              <li className="footer-li">
-                <Link to="/Faq" className="footer-a">
+              <li className="footer__list-item">
+                <Link to="/Faq" className="footer__link">
                   FAQs
                 </Link>
               </li>
-              <li className="footer-li">
-                <Link to="/Review" className="footer-a">
+              <li className="footer__list-item">
+                <Link to="/Review" className="footer__link">
                   Reviews
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="footer-connect">
-            <h3 className="footer-title">CONTACT</h3>
-            <ul className="footer-contacts">
-              <li className="footer-li">
-                <Link to="/Home" className="footer-contact">
-                  <FaEnvelope className="footer-icon" />
-                  <p className="footer-text">Email</p>
+          <div className="footer__links">
+            <h3 className="links__title">CONTACT</h3>
+            <ul>
+              <li className="footer__list-item">
+                <Link to="/Home" className="links__social">
+                  <FaEnvelope className="links__social--icon" />
+                  <p className="links__social--name">Email</p>
                 </Link>
               </li>
-              <li className="footer-li">
-                <Link to="/Home" className="footer-contact">
-                  <FaFacebookF className="footer-icon" />
-                  <p className="footer-text">Facebook</p>
+              <li className="footer__list-item">
+                <Link to="/Home" className="links__social">
+                  <FaFacebookF className="links__social--icon" />
+                  <p className="links__social--name">Facebook</p>
                 </Link>
               </li>
-              <li className="footer-li">
-                <Link to="/Home" className="footer-contact">
-                  <FaInstagram className="footer-icon" />
-                  <p className="footer-text">Instagram</p>
+              <li className="footer__list-item">
+                <Link to="/Home" className="links__social">
+                  <FaInstagram className="links__social--icon" />
+                  <p className="links__social--name">Instagram</p>
                 </Link>
               </li>
-              <li className="footer-li">
-                <Link to="/Home" className="footer-contact">
-                  <FaLinkedinIn className="footer-icon" />
-                  <p className="footer-text">LinkedIn</p>
+              <li className="footer__list-item">
+                <Link to="/Home" className="links__social">
+                  <FaLinkedinIn className="links__social--icon" />
+                  <p className="links__social--name">LinkedIn</p>
                 </Link>
               </li>
-              <li className="footer-li">
-                <Link to="/Home" className="footer-contact">
-                  <FaTwitter className="footer-icon" />
-                  <p className="footer-text">Twitter</p>
+              <li className="footer__list-item">
+                <Link to="/Home" className="links__social">
+                  <FaTwitter className="links__social--icon" />
+                  <p className="links__social--name">Twitter</p>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <ul className="footer-legal">
-          <li>
-            <p className="footer-a">
+        <ul className="footer__legal">
+          <li className="legal__list-item">
+            <p className="legal__link">
               Copyright © 2022 Venturo. All Rights Reserved
             </p>
           </li>
-          <li className="footer-li">
-            <Link to="/Home" className="footer-a">
+          <li className="legal__list-item">
+            <Link to="/Home" className="legal__link">
               Terms
             </Link>
           </li>
-          <li className="footer-li">
-            <Link to="/Home" className="footer-a">
+          <li className="legal__list-item">
+            <Link to="/Home" className="legal__link">
               Privacy
             </Link>
           </li>

@@ -17,11 +17,11 @@
   width: 220px;
 }
 
-.nav__title__logo {
+.nav__title--logo {
   width: 60px;
 }
 
-.nav__title__name {
+.nav__title--name {
   width: 160px;
 }
 
@@ -31,14 +31,14 @@
   align-items: center;
 }
 
-.nav__links__link {
+.nav__links--link {
   position: relative;
   color: #000000;
   font-size: 16px;
   margin: 0px 16px;
 }
 
-.nav__links__link::after {
+.nav__links--link::after {
   content: "";
   position: absolute;
   height: 3px;
@@ -50,7 +50,7 @@
   transition: all 200ms ease;
 }
 
-.nav__links__link:hover::after {
+.nav__links--link:hover::after {
   transform: scale(1);
 }
 
@@ -104,7 +104,7 @@
   margin: 16px 8px 0px 8px;
 }
 
-.nav__personal__profile-picture {
+.nav__personal--profile-picture {
   background-color: #38d9c2;
   border: #38d9c2 solid;
   color: #f8f8f8;

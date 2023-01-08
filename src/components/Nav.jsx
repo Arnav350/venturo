@@ -24,6 +24,7 @@ function Nav() {
 
   function dropdown() {
     const drop = document.querySelector(".nav__info__dropdown").style;
+    console.log("hello");
     if (drop.opacity === "0") {
       drop.opacity = 1;
     } else {
@@ -51,31 +52,31 @@ function Nav() {
   return (
     <nav className="nav-bar">
       <Link to="/Home" className="nav__title">
-        <figure className="nav__title__logo">
+        <figure className="nav__title--logo">
           <img src={Logo} alt="Logo" />
         </figure>
-        <figure className="nav__title__name">
+        <figure className="nav__title--name">
           <img src={Name} alt="Venturo" />
         </figure>
       </Link>
       <ul className="nav__links">
         <li>
-          <button className="nav__links__link" onClick={() => openSign("up")}>
+          <button className="nav__links--link" onClick={() => openSign("up")}>
             Start Learning
           </button>
         </li>
         <li>
-          <button className="nav__links__link" onClick={() => openSign("up")}>
+          <button className="nav__links--link" onClick={() => openSign("up")}>
             Volunteer
           </button>
         </li>
         <li>
-          <Link to="/Donate" className="nav__links__link">
+          <Link to="/Donate" className="nav__links--link">
             Donate
           </Link>
         </li>
         <li>
-          <Link to="/About" className="nav__links__link">
+          <Link to="/About" className="nav__links--link">
             About
           </Link>
         </li>
@@ -99,10 +100,10 @@ function Nav() {
           </button>
           <div className="nav__info__dropdown">
             <div className="nav__info__personal">
-              <div className="nav__personal__profile-picture">
+              <div className="nav__personal--profile-picture">
                 {user.email.toUpperCase()[0]}
               </div>
-              <div className="nav__personal__name">FIRST NAME LAST NAME</div>
+              <div className="nav__personal--name">FIRST NAME LAST NAME</div>
             </div>
             <div className="nav__info__email">{user.email}</div>
             <Link to="/Account" className="nav__info__manage">
@@ -118,16 +119,13 @@ function Nav() {
         <div className="nav__burger"></div>
       </button>
       <div className="nav__burger__menu">
-        <Link to="/Donate" className="nav__burger__menu__donate">
+        <Link to="/Donate" className="nav__menu--donate">
           Donate
         </Link>
-        <Link to="/About" className="nav__burger__menu__about">
+        <Link to="/About" className="nav__menu--about">
           About
         </Link>
-        <button
-          className="nav__burger__menu__signin"
-          onClick={() => openSign("in")}
-        >
+        <button className="nav__menu--signin" onClick={() => openSign("in")}>
           Sign In
         </button>
       </div>
