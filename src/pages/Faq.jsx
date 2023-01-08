@@ -11,6 +11,10 @@ function Faq() {
     window.scrollTo(0, 0);
   }, []);
 
+  /* 
+    Create a search bar for faqs where you can search for a question and then use keyup to see when the user presses enter
+  */
+
   return (
     <>
       <main>

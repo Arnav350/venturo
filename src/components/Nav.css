@@ -35,7 +35,7 @@
   position: relative;
   color: #000000;
   font-size: 16px;
-  padding: 0px 16px;
+  margin: 0px 16px;
 }
 
 .nav__links__link::after {
