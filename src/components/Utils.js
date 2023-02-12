@@ -3,7 +3,6 @@ import "./Sign.css";
 import "../pages/About.css";
 import "../pages/Account.css";
 import "../pages/Donate.css";
-import "../pages/Elementary.css";
 import "../pages/Faq.css";
 import "../pages/Main.css";
 import "../pages/Plan.css";

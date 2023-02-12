@@ -12,7 +12,6 @@ import Plan from "./pages/Plan.jsx";
 import Review from "./pages/Review.jsx";
 import Schedule from "./pages/Schedule.jsx";
 //test
-import Elementary from "./pages/Elementary.jsx";
 import Missing from "./pages/Missing.jsx";
 import CheckSign from "./components/CheckSign.js";
 
@@ -41,7 +40,6 @@ function App() {
           {/* Private */}
           <Route element={<CheckSign />}>
             <Route path="/Account" element={<Account />} />
-            <Route path="/Elementary" element={<Elementary />} />
             <Route path="/Schedule" element={<Schedule />} />
           </Route>
         </Routes>
